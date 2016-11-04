@@ -1,0 +1,805 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Ap",
+				"AppType	uint32 ƒ"
+			],
+			[
+				"fun",
+				"func (*SApp)	func (...) {...} ʂ"
+			],
+			[
+				"g",
+				"GILog	common.ILog ν"
+			],
+			[
+				"M",
+				"M_strName	string ν"
+			],
+			[
+				"im",
+				"import	import (...) ʂ"
+			],
+			[
+				"m",
+				"M_u32OutMask	uint32 ν"
+			],
+			[
+				"f",
+				"FgGreen	 Ɩ"
+			],
+			[
+				"for",
+				"format	string ν"
+			],
+			[
+				"pr",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"set",
+				"SetOutFmtFunc	 ƒ"
+			],
+			[
+				"mu",
+				"Mustln	 ƒ"
+			],
+			[
+				"e",
+				"Errorf	 ƒ"
+			],
+			[
+				"ha",
+				"HasSuffix	bool ƒ"
+			],
+			[
+				"fa",
+				"Fatalln	 ƒ"
+			],
+			[
+				"cm",
+				"CMsgChannelAddrEnd	flatbuffers.UOffsetT ƒ"
+			],
+			[
+				"cms",
+				"CMsgChannelAddrAddQQ	 ƒ"
+			],
+			[
+				"Print",
+				"Println	 ƒ"
+			],
+			[
+				"ef",
+				"EOF	error ν"
+			],
+			[
+				"on",
+				"onClientQuit	 ƒ"
+			],
+			[
+				"sl",
+				"Sleep	 ƒ"
+			],
+			[
+				"func",
+				"func (*SClientMgr)	func (...) {...} ʂ"
+			],
+			[
+				"fu",
+				"func (*SClient)	func (...) {...} ʂ"
+			],
+			[
+				"con",
+				"Conn	interface ¡"
+			],
+			[
+				"l",
+				"Lshortfile	 Ɩ"
+			],
+			[
+				"tcp",
+				"TCPListener	struct ʈ"
+			],
+			[
+				"r",
+				"run	 ƒ"
+			],
+			[
+				"ru",
+				"runImp	 ƒ"
+			],
+			[
+				"p",
+				"Panicln	 ƒ"
+			],
+			[
+				"get",
+				"GetRootAsCMsgRspGetConfig	*config_center.CMsgRspGetConfig ƒ"
+			],
+			[
+				"ga",
+				"GateEnd	flatbuffers.UOffsetT ƒ"
+			],
+			[
+				"getu",
+				"GetUint32	n uint32 ƒ"
+			],
+			[
+				"a",
+				"App	*SApp ν"
+			],
+			[
+				"ne",
+				"newConfigCenter	*SConfigCenter ƒ"
+			],
+			[
+				"new",
+				"newConfigCenter	*SClient ƒ"
+			],
+			[
+				"S",
+				"SClient	struct ʈ"
+			],
+			[
+				"spr",
+				"Sprintf	string ƒ"
+			],
+			[
+				"pa",
+				"Params	map[string]string ƒ"
+			],
+			[
+				"u",
+				"URI	string ƒ"
+			],
+			[
+				"in",
+				"Input	url.Values ƒ"
+			],
+			[
+				"gets",
+				"GetString	string ƒ"
+			],
+			[
+				"tr",
+				"TrimLeft	string ƒ"
+			],
+			[
+				"st",
+				"strings	 package ρ"
+			],
+			[
+				"ma",
+				"MkdirAll	error ƒ"
+			],
+			[
+				"vc",
+				"vCurDir"
+			],
+			[
+				"F",
+				"F_Err2"
+			],
+			[
+				"client",
+				"client_server"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 271.0,
+		"history":
+		[
+			"import os;os.system('start cmd')",
+			"import os;os.system('cmd')",
+			"os.system('cmd')",
+			"view.run_command(\"save\")",
+			"view.run_command(\"saveall\")",
+			"view.run_command(\"copypath\")",
+			"view.run_command(\"t1\")",
+			"view.run_command(\"copypath\")",
+			"view.run_command(\"t1\")",
+			"view.run_command(\"copypat1h\")",
+			"view.run_command(\"copypath\")",
+			"view.run_command('copypath')",
+			"view.run_command('t1')",
+			"view.run_command('example')",
+			"view.run_command('t1')",
+			"view.run_command('example')",
+			";",
+			"view.run_command('t1')",
+			"?",
+			"help",
+			"dir",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"clear",
+			"cls",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib.request,os; pf = 'PackageControl.sublime-package'; ipp = sublime.installed_packages_path();urllib.request.install_opener( urllib.request.build_opener(urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf),'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace('','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/F/github"
+	],
+	"file_history":
+	[
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/main.go",
+		"/E/study/gopath/src/github.com/bsn069/web_login/readme.txt",
+		"/D/bsn_git/readme.txt",
+		"/E/study/gopath/src/github.com/bsn069/web_login_server/main.go",
+		"/E/study/gopath/src/beego_web_t1/index.html",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/out/fbs_client_loginGate_generated.h",
+		"/D/work/pb/protobuf/examples/addressbook.proto",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/pb/out/cpp/test.pb.cc",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/pb/out/cpp/test.pb.h",
+		"/D/work/pb/protobuf/cmake/README.md",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/remake.bat",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/pb/remake.bat",
+		"/E/study/flatbuffers/samples/sample_binary.cpp",
+		"/E/study/flatbuffers/samples/monster_generated.h",
+		"/E/study/flatbuffers/samples/monster.fbs",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/fbs_client_loginGate.fbs",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/config_center.fbs",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/pb/test.proto",
+		"/H/dev/andriod/swordm3d-products/trunk/server/data/l10n/zh-cn/stringtable_core.txt",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/login_gate/cmd.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/fbs_common.fbs",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/login_gate/init.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/log/port.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/log/common.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/log/util.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/log/log.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/login_gate/port.go",
+		"/H/old_c/wdwd/Documents/Unreal Projects/n2/Source/n2.Target.cs",
+		"/H/old_c/wdwd/Documents/Unreal Projects/n2/Source/n2Editor.Target.cs",
+		"/H/old_c/wdwd/Documents/Unreal Projects/n2/Source/m1/m1.Build.cs",
+		"/H/old_c/wdwd/Documents/Unreal Projects/n2/Source/n2/n2.Build.cs",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/app.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/cmd.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/common.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/init.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/out/fbs_common/EAppType.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/port.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/login_gate/common.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/log/cmd.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/input/port.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/input/init.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/log/init.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/input/cmd.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/input/input.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/login_gate/app.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/login_gate/client_mgr.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/common/type.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/client_mgr.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/client.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/login_gate/port_app.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/log/log_test.go",
+		"/C/Users/butao/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/butao/AppData/Roaming/Sublime Text 3/Packages/t1/t1.py",
+		"/C/Users/butao/AppData/Roaming/Sublime Text 3/Packages/GoSublime/gscommands.py",
+		"/C/Users/butao/AppData/Roaming/Sublime Text 3/Packages/GoSublime/gs9o.py",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/main.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/common/string.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/common/call.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/common/interface.go",
+		"/C/Users/butao/AppData/Roaming/Sublime Text 3/Packages/GoSublime/gspalette.py",
+		"/C/Users/butao/AppData/Roaming/Sublime Text 3/Packages/GoSublime/gsev.py",
+		"/C/Users/butao/AppData/Roaming/Sublime Text 3/Packages/GoSublime/GoSublime.py",
+		"/C/Users/butao/AppData/Roaming/Sublime Text 3/Packages/bz2/st2_windows_x64/bz2.pyd",
+		"/E/study/gopath/src/github.com/bsn069/go/bsn_common/string.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/app/main.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/app0910/AppLog.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/app0910/AppLogin.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/bsn_component/Bsn_Scale.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/app0910/main.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/app/AppLog.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/app/AppRoot.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/bsn_component/AutoResize.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/app0910/AppWait.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/app0910/AppRoot.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/bsn_component/Bsn_Login.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/app/AppLogin.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/app/AppWait.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/moc.h",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/moc.cpp",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/moc.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/moc_cgo_windows_386.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/bsn_component/Bsn_T1.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/application.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/q3.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/main.qml",
+		"/H/dev/swordm3d-code/trunk/server/code/include/ProtoBuffer/ClientToGS.proto",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/deploy/windows/Universal/ApplicationWindow.qml",
+		"/H/old_c/wdwd/Documents/qt/1.ui",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/q2.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/MainForm.ui.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qrc.cpp",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/deploy/windows/qml/main.qml",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/common/msg_header_client_loginGate.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/out/fbs_client_loginGate/EMsgType2LoginGate.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/example/3.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/loginGateMsg.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/login_gate.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/login_gate/client.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/example/qt.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt/remake.bat",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt/main.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/client_loginGate.fbs",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/example/1.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/example/2.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/common/sendMsg.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/common/msg_header.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/common/msg_header_client_loginGate.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/common/call.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/test.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/test/1.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/port_app.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/client/main.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/login_gate/config.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/out/common/EServerType.go",
+		"/E/study/flatbuffers/tests/go_test.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/config_center/client.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/server_monitor/config_center.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/server_monitor/app.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/config_center/config.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/common.fbs",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/config_center/app.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/config/config_center.json",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/config/a.ini",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/web_login_1/conf/app.conf",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/Config/EServerType.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/config_center/CGateConfig.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/config_center/SMsgReqGetConfig.go",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/common/EServerType.go"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 117.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"g_Mutex",
+			"log.Fatal",
+			"log.Println",
+			"GSLog",
+			"M_SCmd",
+			"FgHiYellow",
+			"FgHiRed",
+			"FgMagenta",
+			"FgCyan",
+			"bsn_common",
+			"v",
+			"common.TVoid",
+			"TVoid",
+			"bsn_common",
+			"TInputParams",
+			"OG",
+			"NFO",
+			"elp",
+			"ASK",
+			"UT",
+			"ET",
+			"bsn_common",
+			"ShowFunc",
+			"M_TInputHelp",
+			"TInputOK",
+			"M_strUseMod",
+			"m_chanQuit",
+			"CCommon",
+			"SHttp",
+			"?",
+			".php",
+			"href",
+			"createHTTPClient",
+			"ShowEventResult",
+			"SendSrc",
+			"glog",
+			"funcUseSkillEffectCost",
+			"CheckAttand",
+			"Skill",
+			"GetSkillMagicDesc",
+			"cast_sub_skill_new_target",
+			".lua",
+			"h:\\dev\\swordm3d-products\\trunk\\server\\data\\script\\skill\\",
+			".lua",
+			"h:\\dev\\swordm3d-products\\trunk\\server\\data\\script\\skill",
+			"Trap03",
+			"Guide02",
+			"Trap01",
+			"ctrl+r",
+			"args",
+			"index",
+			" },",
+			"shell",
+			"GOPATH",
+			"GOROOT",
+			"build",
+			"convert_text_to_utf8",
+			"n",
+			"o",
+			"undo",
+			"convert_to_utf8",
+			"save",
+			"left_delete",
+			"command",
+			"edsd",
+			"e",
+			"    \n",
+			"slurp_find_string",
+			"\" ",
+			"+p",
+			"vClientPath",
+			"uint8",
+			"ctrl",
+			"command",
+			"alt",
+			"ctrl",
+			"delete_line",
+			"ctrl+x",
+			"line",
+			"ctrl+l",
+			"1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"showFunc",
+			"",
+			".txt",
+			"h:\\dev\\swordm3d-code\\trunk\\client\\swordm3d\\Assets\\_Game\\Resources\\Packages\\LuaScript\\skill",
+			"e",
+			"打开当前文件所在文件夹",
+			"\"] ",
+			" \n",
+			"o"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o://E:\\study\\gopath\\src\\pachong":
+	{
+		"height": 537.0
+	},
+	"output.9o://E:\\study\\gopath\\src\\proxy_get":
+	{
+		"height": 174.0
+	},
+	"output.9o://E:\\study\\gopath\\src\\proxy_get\\huaci":
+	{
+		"height": 178.0
+	},
+	"output.GoSublime-main-output":
+	{
+		"height": 178.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 100.0
+	},
+	"output.exec":
+	{
+		"height": 354.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "xsj_tsj.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"vip",
+				"vip\\family_vip.txt"
+			],
+			[
+				"ident",
+				"identity\\identity_config.txt"
+			],
+			[
+				"maintask_",
+				"autofight\\scene\\autofight_scene_MainTask_01_07.txt"
+			],
+			[
+				"facti",
+				"faction_setting.txt"
+			],
+			[
+				"lun",
+				"H:\\dev\\swordm3d-code\\trunk\\client\\swordm3d\\Assets\\_Game\\Resources\\Packages\\Settings\\lunjian\\lunjian_config.txt"
+			],
+			[
+				"family",
+				"H:\\dev\\swordm3d-code\\trunk\\client\\swordm3d\\Assets\\_Game\\Resources\\Packages\\Settings\\vip\\family_vip.txt"
+			],
+			[
+				"book_ye",
+				"autofight\\scene\\autofight_scene_Book_Yechuanghuangcheng.txt"
+			],
+			[
+				"01_10",
+				"autofight\\scene\\autofight_scene_MainTask_01_10.txt"
+			],
+			[
+				"lu",
+				"H:\\dev\\swordm3d-code\\trunk\\client\\swordm3d\\Assets\\_Game\\Resources\\Packages\\Settings\\lunjian\\lunjian_config.txt"
+			],
+			[
+				"lunji",
+				"lunjian.meta"
+			],
+			[
+				"magicde",
+				"skill\\magicdesc.txt"
+			],
+			[
+				"charheaduiconfig",
+				"charheaduiconfig.txt"
+			],
+			[
+				"main",
+				"autofight\\scene\\autofight_scene_MainTask_02_01.txt"
+			],
+			[
+				"npc",
+				"npc\\npcscript.txt"
+			],
+			[
+				"fac",
+				"faction_setting.txt"
+			],
+			[
+				"guardian_long",
+				"npc\\ai\\guardian_longwugongzi.txt"
+			],
+			[
+				"id",
+				"H:\\dev\\swordm3d-code\\trunk\\client\\swordm3d\\Assets\\_Game\\Resources\\Packages\\Settings\\identity\\identity_config.txt"
+			],
+			[
+				"playerattribute",
+				"playerattribute.txt"
+			],
+			[
+				"mainta",
+				"autofight\\scene\\autofight_scene_MainTask_01_01.txt"
+			],
+			[
+				"lunjian_config",
+				"lunjian\\lunjian_config.txt"
+			],
+			[
+				"faction",
+				"faction_setting.txt"
+			],
+			[
+				"fa",
+				"skill\\player_skill_matching\\player_skill_matching-faction-5.txt"
+			],
+			[
+				"xoyao",
+				"skill\\npcskill\\xoyo_guonong_atk01_01.txt"
+			],
+			[
+				"02_",
+				"autofight\\scene\\autofight_scene_MainTask_02_07.txt"
+			],
+			[
+				"cui",
+				"skill\\tangmen\\cuidushu_C.txt"
+			],
+			[
+				"duo",
+				"skill\\tianwang\\duominglianhuanqiang.txt"
+			],
+			[
+				"be",
+				"skill\\tianwang\\benleizuanlongqiang.txt"
+			],
+			[
+				"benle",
+				"skill\\tianwang\\benleizuanlongqiang.txt"
+			],
+			[
+				"cam",
+				"camp.txt"
+			],
+			[
+				"camp",
+				"camp.txt"
+			],
+			[
+				"zhuixing",
+				"skill\\tianwang\\zhuixingzhuyue1.txt"
+			],
+			[
+				"wanyan",
+				"skill\\npcskill\\wanyanlie_atk04_01.txt"
+			],
+			[
+				"tianyi",
+				"skill\\emei\\tianyinzhenhunqu_A.txt"
+			],
+			[
+				"yueshi",
+				"skill\\emei\\yueshiqu_A.txt"
+			],
+			[
+				"skill",
+				"skill\\skillscript.txt"
+			],
+			[
+				"boo",
+				"BootScript.txt"
+			],
+			[
+				"con",
+				"common\\commondef.txt"
+			],
+			[
+				"sui",
+				"skill\\emei\\suiyiqu4.txt"
+			],
+			[
+				"suiyi",
+				"skill\\emei\\suiyiqu1.txt"
+			],
+			[
+				"player_sk",
+				"skill\\player_skill_matching\\player_skill_matching-faction-2.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 35.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 327.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
