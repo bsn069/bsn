@@ -191,6 +191,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/F/github/bsn/.gitignore",
+			"settings":
+			{
+				"buffer_size": 311,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/F/github/bsn/gopath/src/u3d_update/conf/app.conf",
+			"settings":
+			{
+				"buffer_size": 49,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -274,12 +290,18 @@
 	},
 	"expanded_folders":
 	[
-		"/F/github"
+		"/F/github",
+		"/F/github/bsn",
+		"/F/github/bsn/gopath",
+		"/F/github/bsn/gopath/src",
+		"/F/github/bsn/sublime"
 	],
 	"file_history":
 	[
-		"/E/study/gopath/src/github.com/bsn069/bsn_game/main.go",
+		"/F/github/bsn/gopath/src/u3d_update/main.go",
+		"/E/study/gopath/src/github.com/bsn069/web_login/.gitignore",
 		"/E/study/gopath/src/github.com/bsn069/web_login/readme.txt",
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/main.go",
 		"/D/bsn_git/readme.txt",
 		"/E/study/gopath/src/github.com/bsn069/web_login_server/main.go",
 		"/E/study/gopath/src/beego_web_t1/index.html",
@@ -403,9 +425,7 @@
 		"/E/study/gopath/src/github.com/bsn069/bsn_game/config/a.ini",
 		"/E/study/gopath/src/github.com/bsn069/bsn_game/web_login_1/conf/app.conf",
 		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/Config/EServerType.go",
-		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/config_center/CGateConfig.go",
-		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/config_center/SMsgReqGetConfig.go",
-		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/common/EServerType.go"
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/fbs/config_center/CGateConfig.go"
 	],
 	"find":
 	{
@@ -531,8 +551,67 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/F/github/bsn/.gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								251,
+								251
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/F/github/bsn/gopath/src/u3d_update/conf/app.conf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 49,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
