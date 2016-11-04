@@ -7,5 +7,5 @@ import (
 
 func init() {
 	beego.Router("/", &controllers.MainController{})
-	beego.Router("/u3d", &controllers.U3DController{})
+	beego.Router("/u3d/ver/:platform", &controllers.U3DController{}, "get:GetVer")
 }
