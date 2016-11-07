@@ -1,0 +1,1369 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"f",
+				"Fprintf	n int, err error ƒ"
+			],
+			[
+				"sl",
+				"Sleep	 ƒ"
+			],
+			[
+				"V",
+				"vu64NS	int64 ν"
+			],
+			[
+				"un",
+				"UnixNano	int64 ƒ"
+			],
+			[
+				"no",
+				"Now	time.Time ƒ"
+			],
+			[
+				"n",
+				"Nanosecond	 Ɩ"
+			],
+			[
+				"v",
+				"vu16FPS	uint16 ν"
+			],
+			[
+				"m",
+				"M_CloseReason	int32 ν"
+			],
+			[
+				"bsn",
+				"bsn_msg	 package ρ"
+			],
+			[
+				"fun",
+				"func (*SMsg)	func (...) {...} ʂ"
+			],
+			[
+				"g",
+				"Get	interface{} ƒ"
+			],
+			[
+				"func",
+				"func (*SClientUserMgr)	func (...) {...} ʂ"
+			],
+			[
+				"M",
+				"M_IOnAccept	IOnAccept ν"
+			],
+			[
+				"r",
+				"RLocker	sync.Locker ƒ"
+			],
+			[
+				"CLIENT_",
+				"CLIENT_DO	 ƒ"
+			],
+			[
+				"err",
+				"errors	 package ρ"
+			],
+			[
+				"s",
+				"Set	 ƒ"
+			],
+			[
+				"cl",
+				"close	err error ƒ"
+			],
+			[
+				"er",
+				"Errorln	 ƒ"
+			],
+			[
+				"tc",
+				"TCPConn	struct ʈ"
+			],
+			[
+				"m_c",
+				"M_Close	bool ν"
+			],
+			[
+				"eser",
+				"EServerType_ServerType_Echo	 Ɩ"
+			],
+			[
+				"e",
+				"Errorln	 ƒ"
+			],
+			[
+				"se",
+				"send_CmdGate2GateConfig_GetServerConfigReq	 ƒ"
+			],
+			[
+				"t",
+				"time	 package ρ"
+			],
+			[
+				"send",
+				"send_CmdGate2Server_LoginReq	err error ƒ"
+			],
+			[
+				"vs",
+				"vstrIP	[]string ν"
+			],
+			[
+				"d",
+				"Debugln	 ƒ"
+			],
+			[
+				"sp",
+				"Split	[]string ƒ"
+			],
+			[
+				"st",
+				"String	*string ƒ"
+			],
+			[
+				"C",
+				"ClientUserMgr	*SClientUserMgr ƒ"
+			],
+			[
+				"sen",
+				"Send	error ƒ"
+			],
+			[
+				"si",
+				"Serialize2Byte	bsn_common.TMsgLen ƒ"
+			],
+			[
+				"SCmdCli",
+				"SCmdClient1	*SCmdClient1 ν"
+			],
+			[
+				"us",
+				"ServerUserMgr	*SServerUserMgr ƒ"
+			],
+			[
+				"c",
+				"Close	err error ƒ"
+			],
+			[
+				"m_",
+				"M_chanWaitGateConfig	chan bool ν"
+			],
+			[
+				"bs",
+				"bsn_msg	 package ρ"
+			],
+			[
+				"S",
+				"SGate	struct ʈ"
+			],
+			[
+				"tm",
+				"TMsgType	uint16 ʈ"
+			],
+			[
+				"ss",
+				"SNotifyClose	*bsn_common.SNotifyClose ν"
+			],
+			[
+				"T",
+				"TState	int32 ʈ"
+			],
+			[
+				"li",
+				"Listen	err error ƒ"
+			],
+			[
+				"vm",
+				"vTMsgType	bsn_common.TMsgType ν"
+			],
+			[
+				"str",
+				"strMsg	string ν"
+			],
+			[
+				"run",
+				"Run	error ƒ"
+			],
+			[
+				"tms",
+				"TMsgType	uint16 ʈ"
+			],
+			[
+				"max",
+				"MaxUint16	 Ɩ"
+			],
+			[
+				"new",
+				"NewClient2GateMsg	[]byte ƒ"
+			],
+			[
+				"cm",
+				"CSMsgHeader_Size	 Ɩ"
+			],
+			[
+				"m_t",
+				"M_TGateFuncOnNewUser	TGateFuncOnNewUser ν"
+			],
+			[
+				"db",
+				"Debugln	 ƒ"
+			],
+			[
+				"get",
+				"GetServerMgr	*SServerUserMgr ƒ"
+			],
+			[
+				"MU",
+				"Mustln	 ƒ"
+			],
+			[
+				"m_S",
+				"M_strAddr	string ν"
+			],
+			[
+				"ty",
+				"Type	bsn_common.TMsgType ƒ"
+			],
+			[
+				"u",
+				"vu8ServerType	uint8 ν"
+			],
+			[
+				"fu",
+				"func	Function"
+			],
+			[
+				"re",
+				"Remove	error ƒ"
+			],
+			[
+				"ne",
+				"NewCmd	*SCmd ƒ"
+			],
+			[
+				"sc",
+				"SCmd	struct ʈ"
+			],
+			[
+				"gs",
+				"GSLog	*bsn_log.SLog ν"
+			],
+			[
+				"pa",
+				"ParseUint	n uint64, err error ƒ"
+			],
+			[
+				"G",
+				"GSLog	*bsn_log.SLog ν"
+			],
+			[
+				"p",
+				"ParseUint	n uint64, err error ƒ"
+			],
+			[
+				"to",
+				"ToLower	string ƒ"
+			],
+			[
+				"Mu",
+				"Mustln	 ƒ"
+			],
+			[
+				"de",
+				"Debugln	 ƒ"
+			],
+			[
+				"has",
+				"HasSuffix	bool ƒ"
+			],
+			[
+				"go",
+				"GOMAXPROCS	int ƒ"
+			],
+			[
+				"pr",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"m_T",
+				"m_TCloseChan	TCloseChan ν"
+			],
+			[
+				"Tu",
+				"TUserMgrType	uint ʈ"
+			],
+			[
+				"i",
+				"iConn	net.Conn ν"
+			],
+			[
+				"I",
+				"IConnect	interface ¡"
+			],
+			[
+				"sta",
+				"Stack	int ƒ"
+			],
+			[
+				"m_de",
+				"m_debugFmtFunc	TDebugFmtFunc ν"
+			],
+			[
+				"fm",
+				"fmtOut	string ƒ"
+			],
+			[
+				"time",
+				"timeFunc	TTimeFunc ν"
+			],
+			[
+				"el",
+				"ELevel_Error	 Ɩ"
+			],
+			[
+				"spr",
+				"Sprintf	string ƒ"
+			],
+			[
+				"ti",
+				"Time	struct ʈ"
+			],
+			[
+				"E",
+				"Errorln	 ƒ"
+			],
+			[
+				"mu",
+				"Mustln	 ƒ"
+			],
+			[
+				"prn",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"De",
+				"Debugln	 ƒ"
+			],
+			[
+				"prin",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"va",
+				"ValueOf	reflect.Value ƒ"
+			],
+			[
+				"ca",
+				"Call	[]reflect.Value ƒ"
+			],
+			[
+				"strm",
+				"strMod	string ν"
+			],
+			[
+				"can",
+				"CanInterface	bool ƒ"
+			],
+			[
+				"me",
+				"MethodByName	reflect.Value ƒ"
+			],
+			[
+				"k",
+				"Kind	reflect.Kind ƒ"
+			],
+			[
+				"newl",
+				"newLoginSelfMgr	*sLoginSelfMgr ƒ"
+			],
+			[
+				"in",
+				"InsertFlag	string ν"
+			],
+			[
+				"mo",
+				"ModFrom	string ν"
+			],
+			[
+				"bo",
+				"BoolVar	 ƒ"
+			],
+			[
+				"we",
+				"WriteString	n int, err error ƒ"
+			],
+			[
+				"nw",
+				"NewBuffer	*bytes.Buffer ƒ"
+			],
+			[
+				"strt",
+				"strTemps	[]string ν"
+			],
+			[
+				"ms",
+				"MsgProcFun	string ν"
+			],
+			[
+				"em",
+				"EMsgTypeClient2LoginGate_Client2LoginGate_LoginReq	 Ɩ"
+			],
+			[
+				"sm",
+				"SMsg_Client2LoginGate_LoginReq	struct ʈ"
+			],
+			[
+				"enu",
+				"EMsgTypeLoginGate2Client_LoginGate2Client_Null	 Ɩ"
+			],
+			[
+				"lo",
+				"sLoginGate	struct ʈ"
+			],
+			[
+				"mq",
+				"m_quitCode	uint16 ν"
+			],
+			[
+				"Uin",
+				"UintVar	 ƒ"
+			],
+			[
+				"im",
+				"import	import (...) ʂ"
+			],
+			[
+				"tn",
+				"TNodeId	uint8 ʈ"
+			],
+			[
+				"R",
+				"Result	*bool ν"
+			],
+			[
+				"m_s",
+				"m_sMsg_NodeReg_Req	*SMsg_NodeReg_Req ν"
+			],
+			[
+				"reg",
+				"RegDownNode	error ƒ"
+			],
+			[
+				"m_str",
+				"m_strDownNodeAddr	string ν"
+			],
+			[
+				"m_b",
+				"m_bRegDownNode	bool ν"
+			],
+			[
+				"cmd",
+				"cmd2Func	map[string]func([]string) error ν"
+			],
+			[
+				"fuc",
+				"func	func {...} ʂ"
+			],
+			[
+				"std",
+				"Stdin	*os.File ν"
+			],
+			[
+				"set",
+				"setMgrNode	error ƒ"
+			],
+			[
+				"PR",
+				"Println	 ƒ"
+			],
+			[
+				"ce",
+				"ceNodeType_Sibling	 Ɩ"
+			],
+			[
+				"node",
+				"nodeType	eNodeType ν"
+			],
+			[
+				"To",
+				"TNodeLevel	uint8 ʈ"
+			],
+			[
+				"cno",
+				"CNodeLevel_Min	 Ɩ"
+			],
+			[
+				"cn",
+				"CNodeId_Max	 Ɩ"
+			],
+			[
+				"Tno",
+				"TNodeLevel	uint8 ʈ"
+			],
+			[
+				"ch",
+				"m_sNodeChilds	[]*SNode ν"
+			],
+			[
+				"pn",
+				"pSNode	*SNode ν"
+			],
+			[
+				"Int",
+				"Int32	*int32 ƒ"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/E/github/bsn/gopath/src/u3d_update/main.go",
+			"settings":
+			{
+				"buffer_size": 108,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/github/bsn/setup.bat",
+			"settings":
+			{
+				"buffer_size": 115,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/t1/t1.py",
+			"settings":
+			{
+				"buffer_size": 572,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 76.0,
+		"last_filter": "Package Control: in",
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 364.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/github/bsn",
+		"/E/github/bsn/gopath",
+		"/E/github/bsn/gopath/src",
+		"/E/github/bsn/gopath/src/src",
+		"/E/github/bsn/gopath/src/src/github.com",
+		"/E/github/bsn/gopath/src/src/github.com/astaxie",
+		"/E/github/bsn/gopath/src/src/github.com/astaxie/beego"
+	],
+	"file_history":
+	[
+		"/I/新建 文本文档.txt",
+		"/C/Users/Administrator/Desktop/新建文本文档.txt",
+		"/D/sync_d/pt_code/cpp/TemplateLibShared/Port.h",
+		"/D/sync_d/bsn/cpp/TemplateLibShared/CMakeLists.txt",
+		"/D/sync_d/bsn/cpp/CMakeLists.txt",
+		"/D/sync_d/pt_code/bsn/common/include/os.hpp",
+		"/D/sync_d/pt_code/bsn/common/include/include.hpp",
+		"/D/sync_d/bsn/cpp/test/clear.bat",
+		"/D/sync_d/bsn/set_bak/周一20160721410234.txt",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_util/app.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_util/build_test.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_util/fps.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_net/tcp_recver.go",
+		"/G/movie/18+/text/小说[黄书全集] (1)jar/情色小说全集/【全集】第一次为男友吹箫/【全集】第一次为男友吹箫.txt",
+		"/G/movie/18+/text/小说[黄书全集] (1)jar/情色小说全集/【合集】《问非传》　0－2　章 - powered by Discuz!.txt",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_msg/msg.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/app.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_app_base/app.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_util/common.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_util/port.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_app_base/build_test.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_app_base/common.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_app_base/port.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_common/run_cmd.go",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/GoSublime.sublime-settings",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_net/tcp_listener.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/client_user.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_common/state.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_common/type_define.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_msg/msg_header.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/client_user_mgr.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_msg/bsn_msg_test.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_msg/common.go",
+		"/D/sync_d/ptcode/gopath/src/github.com/bsn069/go/bsn_net/common.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/app.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/client_user_mgr.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_net/1.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/client_user.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_net/tcplistener.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_common/notify_close.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_common/state.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_common/run_cmd.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_msg/msg.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/ljt/bsn_gate/client_user.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_2/cmd_client.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/main.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_2/cmd_gate.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_2/cmd.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/gate.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/app.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/cmd.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/common.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/cmd.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/client_user_msg_sys.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/client_user_msg_client.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/client_user_mgr.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_common/i_log.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_log/log.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_log/bsn_log_test.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_common/type_define.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client1/app.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_2/cmd_client1.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_2/cmd_echo.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_2/cmd_gate3.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_2/cmd_gate_config1.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/port.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/server_user.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/server_user_mgr.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/build_test.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client/client_user.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/client_user.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/client_user_mgr.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_utility/run_cmd.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_utility/build_test.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/1.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/client_user_msg_sys.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/client_user_msg_client.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/client_user_msg.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_net/listener.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/server_user_mgr.go",
+		"/D/ptcode/gopath/src/bsn_msg_gate_server/login.pb.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_proto/bsn_msg_gate_server/login.proto",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/server_user_send.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_echo/client_user_send.go",
+		"/D/ptcode/gopath/src/bsn_define/server_type.pb.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_proto/bsn_define/server_type.proto",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/server_user_msg_server.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/app.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_input/input.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/build_test.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/port.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/server_user_mgr.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/server_user.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/common.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/server_user.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/server_user_gate_config_msg_gate_config.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/server_user_gate_config.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_net/connecter_with_msg_header.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_net/connecter.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/user_mgr.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_net/server.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate/user_mgr.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/port.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_echo/client_user_msg_gate.go",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/GoSublime/CHANGELOG.md",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_echo/client_user_mgr.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_echo/client_user.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_proto/bsn_msg_gate_server/cmd.proto",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_net/session_with_msg_header.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_net/session.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_net/session_addr.go",
+		"/D/ptcode/gopath/src/bsn_msg_gate_server/cmd.pb.go",
+		"/D/ptcode/gopath/src/bsn_msg_client_echo_server/cmd.pb.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_echo/client_user_msg_client.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_net/send.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_msg/msg_header.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_msg/msg_gate2server_clientmsg.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate_config1/client_user_msg_gate.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_proto/bsn_msg_gate_gateconfig/template.proto",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_proto/bsn_msg_gate_server/template.proto",
+		"/D/ptcode/gopath/src/bsn_msg_gate_gateconfig/cmd.pb.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_proto/bsn_msg_client_gate/cmd.proto",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_proto/bsn_msg_gate_gateconfig/cmd.proto",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_proto/bsn_define/cmd.proto",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_gate3/server_user_gate_config_msg_sys.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client1/server_user_gate_msg_echo_server.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/bsn_client1/server_user_gate_msg_gate.go",
+		"/D/ptcode/gopath/src/github.com/bsn069/go/README.md"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"bsn_cpp_bsn_dir",
+			"bsn_cpp_bin_dir",
+			"bsn_cpp_build_dir",
+			"IOnAccept",
+			"M_byMsgHeader",
+			"SCmdGate",
+			"Output",
+			"TFuncAppQuit",
+			"M_Cmdstr2Func",
+			"M_CmdchanFunc",
+			"Command",
+			"TFuncOnCommandQuit",
+			"SApp",
+			"M_strCmd2Func",
+			"M_TFuncAppClose",
+			"M_HadClose",
+			"M_HadRun",
+			"M_Users",
+			"M_strTCPListenAddr",
+			"M_chanTCPConn",
+			"M_SNotifyCloseTCP",
+			"ClientUserMgr().Run",
+			"send_CmdGate2Server_LoginReq",
+			"M_WaitGroup",
+			"M_chanWaitGateConfig",
+			"SServerUserGateConfig",
+			"F_StringDefaulted",
+			"Default_GoTest_F_StringDefaulted",
+			"default_string",
+			"SCmdGateConfig",
+			"SServerUserGateConfigMgr",
+			"M_SServerUserGateConfigMgr",
+			"SServerUser",
+			"GATE3",
+			"Gate3",
+			"SCmdGate3",
+			"SServerGate",
+			"SServerGateConfig",
+			"SCmdGateConfig",
+			"NewNetConnecter",
+			"TInputParams",
+			"M_SGate",
+			"SMain",
+			"SGate",
+			"M_TState",
+			"SClientUserMgr",
+			"M_by2GateMsg",
+			"SClient",
+			"SMsgHeaderGateServer",
+			"SClient",
+			"34",
+			"IsListen",
+			"M_Id2User",
+			"M_Users",
+			"M_users",
+			"vTUserId",
+			"M_TUserId",
+			"M_TGroupId",
+			"GateServert",
+			"GateClien",
+			"GateClient",
+			"IUser",
+			"GLog",
+			"TUserId",
+			"GLog",
+			"TServerMsgType",
+			"GLog",
+			"bsn_msg.TMsgType",
+			"GLog",
+			"TGroupId",
+			"TUserId",
+			"bsn_msg.TMsgLen",
+			"TUserId",
+			"bsn_msg.TMsgType",
+			"bsn_msg.TMsgLen",
+			"TUserId",
+			"TGroupId",
+			"m_Mutex",
+			"m_Listener",
+			"m_strAddr",
+			"m_chanClose",
+			"GLog",
+			"TChanConn",
+			"TChanClose",
+			"TServerMsgType",
+			"ELevel_",
+			"GLog",
+			"GInput",
+			"GLog",
+			"M_bsn_common.TInputHelp",
+			"TInputHelp",
+			"THelp",
+			"M_bsn_common.TInputUpperName2CmdStruct",
+			"M_bsn_common.TInputUpperName2RegName",
+			"TInputUpperName2RegName",
+			"TInputUpperName2CmdStruct",
+			"TUpperName2RegName",
+			"TUpperName2CmdStruct",
+			"m_",
+			"sLog",
+			"M_bShowHelp",
+			"TModName2CmdStruct",
+			"M_TModName2CmdStruct",
+			"M_TModName2ChanParam",
+			"m_bShowHelp",
+			"m_u16QuitCode",
+			"m_quitCode",
+			"TMod2Chan",
+			"M_mapUpperName2RegName",
+			"M_tUpperName2RegName",
+			"m_tUpperName2RegName",
+			"m_tMod2Chan",
+			"m_strUseMod",
+			"sInput",
+			"m_Listener",
+			"Client",
+			"m_clientId",
+			"sClientMgr",
+			"sLoginGateListener",
+			"SMsgHeader",
+			"Month",
+			"Now",
+			"checkTime",
+			"SLog",
+			"m_strHeader",
+			"m_strUseMod",
+			"SInput",
+			"createModuleFile"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"bsn_dir_cmake_list",
+			"bsn_dir_output_exe",
+			"bsn_dir_cmake_build",
+			"IListenerCB",
+			"SCmdClient",
+			"output",
+			"TAppFuncOnQuit",
+			"M_str2Func",
+			"M_chanFunc",
+			"RunCmd",
+			"TCommandFuncOnQuit",
+			"SCommand",
+			"M_Cmdstr2Func",
+			"M_TFuncAppQuit",
+			"M_HadStop",
+			"M_HadStart",
+			"M_TId2User",
+			"M_TCPstrListenAddr",
+			"M_TCPchanConn",
+			"M_TCPSNotifyClose",
+			"SServerUserTemplate",
+			"SCmdGateConfig1",
+			"SServerUserMgr",
+			"M_SServerUserMgr",
+			"SServerUserGateConfig",
+			"CLIENT1",
+			"Client1",
+			"SCmdClient1",
+			"SServerUserGate",
+			"SServerGate",
+			"SCmdEcho",
+			"M_SApp",
+			"SApp",
+			"SMain",
+			"M_SState",
+			"SNetServer",
+			"SNetListener",
+			"SNetConnecter",
+			"SMsgHeaderServer2Gate",
+			"SServerUser",
+			"M_TId2User",
+			"M_Id2User",
+			"M_Users",
+			"vTGateUserId",
+			"M_TGateUserId",
+			"M_TGateGroupId",
+			"GateServer",
+			"bsn_common.IGateUser",
+			"GSLog",
+			"bsn_common.TGateUserId",
+			"GSLog",
+			"bsn_common.TGateServerMsgType",
+			"GSLog",
+			"bsn_common.TMsgType",
+			"GSLog",
+			"bsn_common.TGateGroupId",
+			"bsn_common.TGateUserId",
+			"bsn_common.TMsgLen",
+			"bsn_common.TGateUserId",
+			"bsn_common.TMsgType",
+			"bsn_common.TMsgLen",
+			"bsn_common.TGateUserId",
+			"bsn_common.TGateGroupId",
+			"M_Mutex",
+			"M_Listener",
+			"M_strAddr",
+			"M_chanClose",
+			"GSLog",
+			"bsn_common.TNetChanConn",
+			"bsn_common.TNetChanClose",
+			"bsn_common.TGateServerMsgType",
+			"bsn_common.ELogLevel_",
+			"GSLog",
+			"GSInput",
+			"GSLog",
+			"M_TInputHelp",
+			"bsn_common.TInputHelp",
+			"TInputHelp",
+			"M_TInputUpperName2CmdStruct",
+			"M_TInputUpperName2RegName",
+			"bsn_common.TInputUpperName2RegName",
+			"bsn_common.TInputUpperName2CmdStruct",
+			"TInputUpperName2RegName",
+			"TInputUpperName2CmdStruct",
+			"M_",
+			"SLog",
+			"TUpperName2CmdStruct",
+			"M_bShowHelp",
+			"M_u16QuitCode",
+			"m_u16QuitCode",
+			"TModName2ChanParam",
+			"M_TUpperName2RegName",
+			"TUpperName2RegName",
+			"M_mapUpperName2RegName",
+			"M_tUpperName2RegName",
+			"M_TMod2Chan",
+			"M_strUseMod",
+			"SInput",
+			"m_iListener",
+			"User",
+			"m_serverId",
+			"sServerMgr",
+			"sListen",
+			"SNetListener",
+			"sClientMgr",
+			"sMsgHeader",
+			"sLog",
+			"sInput",
+			"ModFrom",
+			"bsn_game_common.EMsgTypeLoginGate2Client",
+			"*sMgr)",
+			"*sMgr",
+			"psNode",
+			"sNode",
+			"sMsg",
+			"SMsgHeader"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/E/github/bsn/gopath/src/u3d_update/main.go",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								91,
+								91
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/GoSublime/syntax/GoSublime-Go.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/github/bsn/setup.bat",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 115,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58,
+								58
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Batch File/Batch File.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/t1/t1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								572,
+								572
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o://D:\\Software\\Go\\src\\flag":
+	{
+		"height": 220.0
+	},
+	"output.9o://D:\\Software\\Go\\src\\net":
+	{
+		"height": 130.0
+	},
+	"output.9o://D:\\ptcode\\go":
+	{
+		"height": 261.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn":
+	{
+		"height": 303.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\bsn_gate":
+	{
+		"height": 285.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\bsn_gate2":
+	{
+		"height": 201.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\bsn_input":
+	{
+		"height": 130.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\bsn_log":
+	{
+		"height": 283.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\bsn_login_gate":
+	{
+		"height": 220.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\bsn_net":
+	{
+		"height": 238.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\bsn_node":
+	{
+		"height": 130.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\game\\bin":
+	{
+		"height": 243.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\game\\client\\test":
+	{
+		"height": 142.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\game\\login\\gate":
+	{
+		"height": 221.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\game\\login\\mgr":
+	{
+		"height": 142.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\game\\tools\\module":
+	{
+		"height": 142.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\ipc":
+	{
+		"height": 322.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\net":
+	{
+		"height": 289.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\bsn\\t":
+	{
+		"height": 355.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go":
+	{
+		"height": 226.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_2":
+	{
+		"height": 250.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_client":
+	{
+		"height": 223.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_client1":
+	{
+		"height": 227.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_common":
+	{
+		"height": 262.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_echo":
+	{
+		"height": 208.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_gate":
+	{
+		"height": 330.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_gate2":
+	{
+		"height": 262.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_gate3":
+	{
+		"height": 273.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_gate_config":
+	{
+		"height": 210.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_gate_config1":
+	{
+		"height": 258.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_input":
+	{
+		"height": 204.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_log":
+	{
+		"height": 361.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_msg":
+	{
+		"height": 248.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_net":
+	{
+		"height": 240.0
+	},
+	"output.9o://D:\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_utility":
+	{
+		"height": 256.0
+	},
+	"output.9o://D:\\sync_d\\ptcode\\gopath\\src\\github.com\\bsn069\\go":
+	{
+		"height": 241.0
+	},
+	"output.9o://D:\\sync_d\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_2":
+	{
+		"height": 280.0
+	},
+	"output.9o://D:\\sync_d\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_net":
+	{
+		"height": 283.0
+	},
+	"output.9o://D:\\sync_d\\ptcode\\gopath\\src\\github.com\\bsn069\\go\\bsn_util":
+	{
+		"height": 216.0
+	},
+	"output.GoSublime-main-output":
+	{
+		"height": 142.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 130.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/GoSublime/GoSublime.sublime-build",
+	"project": "pt_tsj.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"login",
+				"server\\XGame\\lua_gs\\plug\\hwServer_PlugLogin_Submit.lua"
+			],
+			[
+				"clientfaction",
+				"client\\xgame\\runtime\\win32\\src\\lua_client\\gui\\hwClient_Layer_CreateFaction.lua"
+			],
+			[
+				"layerfaction",
+				"client\\xgame\\runtime\\win32\\src\\lua_client\\gui\\hwClient_Layer_Faction.lua"
+			],
+			[
+				"faction.lua",
+				"server\\XGame\\lua_gs\\plug\\hwServer_PlugFaction.lua"
+			],
+			[
+				"plugm",
+				"server\\XGame\\lua_gs\\plug\\hwServer_PlugMgr.lua"
+			],
+			[
+				"login.lua",
+				"server\\XGame\\lua_gs\\plug\\hwServer_PlugLogin_Submit.lua"
+			],
+			[
+				"global.lua",
+				"server\\XGame\\lua_gs\\hwServer_Global.lua"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 440.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 364.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
