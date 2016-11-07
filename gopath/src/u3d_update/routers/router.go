@@ -7,5 +7,7 @@ import (
 
 func init() {
 	beego.Router("/", &controllers.MainController{})
-	beego.Router("/u3d/ver/:platform", &controllers.U3DController{}, "get:GetVer")
+
+	u3d := new(controllers.U3DController)
+	beego.Router("/u3d/ver/:platform", u3d, "get:GetVer")
 }

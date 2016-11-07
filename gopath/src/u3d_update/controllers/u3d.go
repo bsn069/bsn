@@ -2,10 +2,12 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
+	"u3d_update/models"
 )
 
 type U3DController struct {
 	beego.Controller
+	model models.U3D
 }
 
 func (c *U3DController) Get() {
@@ -15,7 +17,7 @@ func (c *U3DController) Get() {
 }
 
 func (c *U3DController) GetVer() {
-	c.Data["Website"] = c.Ctx.Input.Param(":platform")
-	c.Data["Email"] = "GetVer@gmail.com"
-	c.TplName = "index.tpl"
+	// var strPlatform = c.Ctx.Input.Param(":platform")
+	c.Ctx.WriteString(c.model.GetVer())
+
 }
