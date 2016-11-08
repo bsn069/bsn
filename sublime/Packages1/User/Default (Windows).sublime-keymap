@@ -1,0 +1,55 @@
+[
+	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+j"], "command": "join_lines" },
+	{ "keys": ["ctrl+shift+l"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["alt+m"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	{ "keys": ["ctrl+l"], "command": "expand_selection", "args": {"to": "line"} },
+
+	{ "keys": ["ctrl+shift+]"], "command": "expand_selection", "args": {"to": "brackets"} },
+	{ "keys": ["ctrl+]"], "command": "move_to", "args": {"to": "brackets"} },
+	
+	{ "keys": ["ctrl+-"], "command": "jump_back" },
+	{ "keys": ["ctrl+shift+-"], "command": "jump_forward" },
+
+	{ "keys": ["alt+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["alt+down"], "command": "select_lines", "args": {"forward": true} },
+
+	{ "keys": ["ctrl+u"], "command": "upper_case" },
+	{ "keys": ["ctrl+shift+u"], "command": "lower_case" },
+
+	{ "keys": ["ctrl+shift+c"], "command": "open_cmd", "args": {} },
+	{ "keys": ["ctrl+shift+e"], "command": "open_path", "args": {} },
+
+	{ "keys": ["ctrl+/"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["ctrl+shift+/"], "command": "toggle_comment", "args": { "block": true } },
+
+	{ "keys": ["ctrl+f2"], "command": "toggle_bookmark" },
+	{ "keys": ["ctrl+shift+f2"], "command": "clear_bookmarks" },
+	{ "keys": ["f2"], "command": "next_bookmark" },
+	{ "keys": ["shift+f2"], "command": "prev_bookmark" },
+	{ "keys": ["alt+f2"], "command": "select_all_bookmarks" },
+
+	{ "keys": ["ctrl+1"], "command": "select_by_index", "args": { "index": 0 } },
+	{ "keys": ["ctrl+2"], "command": "select_by_index", "args": { "index": 1 } },
+	{ "keys": ["ctrl+3"], "command": "select_by_index", "args": { "index": 2 } },
+	{ "keys": ["ctrl+4"], "command": "select_by_index", "args": { "index": 3 } },
+	{ "keys": ["ctrl+5"], "command": "select_by_index", "args": { "index": 4 } },
+	{ "keys": ["ctrl+6"], "command": "select_by_index", "args": { "index": 5 } },
+	{ "keys": ["ctrl+7"], "command": "select_by_index", "args": { "index": 6 } },
+	{ "keys": ["ctrl+8"], "command": "select_by_index", "args": { "index": 7 } },
+	{ "keys": ["ctrl+9"], "command": "select_by_index", "args": { "index": 8 } },
+	{ "keys": ["ctrl+0"], "command": "select_by_index", "args": { "index": 9 } },
+
+	{ "keys": ["f7"], "command": "build" },
+	{ "keys": ["ctrl+p"], "command": "copy_dir_path" },
+	{ "keys": ["ctrl+shift+s"], "command": "save_all" },
+
+	{ "keys": ["shift+alt+enter"], "command": "toggle_full_screen" },
+	{ "keys": ["ctrl+alt+l"], "command": "toggle_side_bar" },
+	{ "keys": ["ctrl+shift+v"], "command": "paste_from_history" },
+	{ "keys": ["alt+g"], "command": "goto_definition" },
+	{ "keys": ["shift+alt+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+
+	{ "keys": ["ctrl+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false} },
+	{ "keys": ["ctrl+shift+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse": true} },
+]

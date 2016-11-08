@@ -1,0 +1,9 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Espresso Libre.tmTheme",
+	"font_size": 16,
+	"ignored_packages":
+	[
+		"Package Control",
+		"Vintage"
+	]
+}
