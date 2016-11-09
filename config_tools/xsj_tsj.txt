@@ -1,6 +1,0 @@
-uId,strFullPath,uVer
-3,C:\Users\butao\AppData\Roaming\Sublime Text 3\Packages\t1\t1.py,1
-5,C:\Users\butao\AppData\Roaming\Sublime Text 3\Packages\t1\t.py,1
-1,C:\Users\butao\AppData\Roaming\Sublime Text 3\Packages\t1\t1.py,1
-2,C:\Users\butao\AppData\Roaming\Sublime Text 3\Packages\t1\t.py,1
-6,C:\Users\butao\AppData\Roaming\Sublime Text 3\Packages\t1,1

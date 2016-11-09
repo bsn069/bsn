@@ -27,3 +27,32 @@ gopath/src/github.com
 gopath/pkg
 gopath/bin
 *.exe~
+
+u3d/[Ll]ibrary/
+u3d/[Tt]emp/
+u3d/[Oo]bj/
+u3d/[Bb]uild/
+u3d/[Bb]uilds/
+u3d/Assets/AssetStoreTools*
+
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Unity3D generated meta files
+*.pidb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.unitypackage
+
