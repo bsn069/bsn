@@ -643,12 +643,13 @@
 						"selection":
 						[
 							[
-								70,
-								70
+								192,
+								192
 							]
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/Batch File/Batch File.tmLanguage"
 						},
