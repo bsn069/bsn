@@ -208,18 +208,10 @@
 			}
 		},
 		{
-			"file": "/F/github/bsn/u3d/setup.bat",
-			"settings":
-			{
-				"buffer_size": 236,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "/F/github/bsn/setup.bat",
 			"settings":
 			{
-				"buffer_size": 1748,
+				"buffer_size": 845,
 				"line_ending": "Windows"
 			}
 		}
@@ -314,6 +306,7 @@
 	],
 	"file_history":
 	[
+		"/F/github/bsn/u3d/setup.bat",
 		"/F/github/bsn/u3d/Assets/Bsn/ThirdPart/tolua/.gitignore",
 		"/F/github/bsn/u3d/Assets/Bsn/ThirdPart/tolua/Assets/Lua/Main.lua",
 		"/F/github/bsn/gopath/src/u3d_update/routers/router.go",
@@ -440,8 +433,7 @@
 		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/deploy/windows/Universal/ApplicationWindow.qml",
 		"/H/old_c/wdwd/Documents/qt/1.ui",
 		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/q2.qml",
-		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/MainForm.ui.qml",
-		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qrc.cpp"
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/MainForm.ui.qml"
 	],
 	"find":
 	{
@@ -568,7 +560,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -598,54 +590,24 @@
 						"translation.y": 570.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/F/github/bsn/u3d/setup.bat",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 236,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								236,
-								236
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/Batch File/Batch File.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "/F/github/bsn/setup.bat",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1748,
+						"buffer_size": 845,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								275,
-								281
+								523,
+								523
 							]
 						],
 						"settings":
@@ -659,7 +621,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
