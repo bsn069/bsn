@@ -9,7 +9,7 @@ if exist tolua (
 )
 popd
 
-xcopy nogit\tolua u3d\Assets\Bsn\ThirdPart\tolua /E /Y
+xcopy nogit\tolua u3d\Assets\Bsn\ThirdPart\tolua /E /Y /I
 
 pushd u3d\Assets\Bsn\ThirdPart\tolua
 	echo clear %cd%
