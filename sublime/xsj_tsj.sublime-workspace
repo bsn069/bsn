@@ -219,7 +219,7 @@
 			"file": "/F/github/bsn/setup.bat",
 			"settings":
 			{
-				"buffer_size": 192,
+				"buffer_size": 1489,
 				"line_ending": "Windows"
 			}
 		}
@@ -314,6 +314,8 @@
 	],
 	"file_history":
 	[
+		"/F/github/bsn/u3d/Assets/Bsn/ThirdPart/tolua/Assets/Lua/Main.lua",
+		"/F/github/bsn/u3d/Assets/Bsn/ThirdPart/tolua/.gitignore",
 		"/F/github/bsn/gopath/src/u3d_update/routers/router.go",
 		"/H/dev/andriod/swordm3d-products/trunk/server/config/config_advance.lua",
 		"/F/github/bsn/sublime/SaveConfig.bat",
@@ -439,9 +441,7 @@
 		"/H/old_c/wdwd/Documents/qt/1.ui",
 		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/q2.qml",
 		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qml/MainForm.ui.qml",
-		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qrc.cpp",
-		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/deploy/windows/qml/main.qml",
-		"/E/study/gopath/src/github.com/bsn069/bsn_game/internal/common/msg_header_client_loginGate.go"
+		"/E/study/gopath/src/github.com/bsn069/bsn_game/qt1/qrc.cpp"
 	],
 	"find":
 	{
@@ -613,8 +613,8 @@
 						"selection":
 						[
 							[
-								48,
-								1
+								236,
+								236
 							]
 						],
 						"settings":
@@ -636,15 +636,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 192,
+						"buffer_size": 1489,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								192,
-								192
+								1280,
+								1280
 							]
 						],
 						"settings":
@@ -654,7 +654,7 @@
 							"syntax": "Packages/Batch File/Batch File.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1152.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
