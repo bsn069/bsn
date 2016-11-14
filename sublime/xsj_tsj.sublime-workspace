@@ -203,7 +203,7 @@
 			"file": "/F/github/bsn/.gitignore",
 			"settings":
 			{
-				"buffer_size": 637,
+				"buffer_size": 657,
 				"line_ending": "Windows"
 			}
 		},
@@ -219,7 +219,7 @@
 			"file": "/F/github/bsn/setup.bat",
 			"settings":
 			{
-				"buffer_size": 1489,
+				"buffer_size": 1539,
 				"line_ending": "Windows"
 			}
 		}
@@ -314,8 +314,8 @@
 	],
 	"file_history":
 	[
-		"/F/github/bsn/u3d/Assets/Bsn/ThirdPart/tolua/Assets/Lua/Main.lua",
 		"/F/github/bsn/u3d/Assets/Bsn/ThirdPart/tolua/.gitignore",
+		"/F/github/bsn/u3d/Assets/Bsn/ThirdPart/tolua/Assets/Lua/Main.lua",
 		"/F/github/bsn/gopath/src/u3d_update/routers/router.go",
 		"/H/dev/andriod/swordm3d-products/trunk/server/config/config_advance.lua",
 		"/F/github/bsn/sublime/SaveConfig.bat",
@@ -576,15 +576,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 637,
+						"buffer_size": 657,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								238,
-								238
+								237,
+								237
 							]
 						],
 						"settings":
@@ -597,7 +597,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -627,7 +627,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -636,25 +636,26 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1489,
+						"buffer_size": 1539,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1280,
-								1280
+								401,
+								401
 							]
 						],
 						"settings":
 						{
 							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/Batch File/Batch File.tmLanguage"
+							"syntax": "Packages/Batch File/Batch File.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1152.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

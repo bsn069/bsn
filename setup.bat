@@ -9,6 +9,8 @@ if exist tolua (
 )
 popd
 
+xcopy nogit\tolua u3d\Assets\Bsn\ThirdPart\tolua /E /Y
+
 pushd u3d\Assets\Bsn\ThirdPart\tolua
 	echo clear %cd%
 	if exist Luajit (
@@ -16,6 +18,13 @@ pushd u3d\Assets\Bsn\ThirdPart\tolua
 		rmdir Luajit /S /Q
 	) else (
 		echo had remove %cd%\LuaJit 
+	)
+
+	if exist ProjectSettings (
+		echo remove %cd%\ProjectSettings
+		rmdir ProjectSettings /S /Q
+	) else (
+		echo had remove %cd%\ProjectSettings
 	)
 
 	if exist Unity5.x (
@@ -29,6 +38,7 @@ pushd u3d\Assets\Bsn\ThirdPart\tolua
 		if exist Editor (
 			echo remove %cd%\Editor
 			rmdir Editor /S /Q
+			del Editor.meta /Q
 		) else (
 			echo had remove %cd%\Editor
 		)
@@ -36,6 +46,7 @@ pushd u3d\Assets\Bsn\ThirdPart\tolua
 		if exist Lua (
 			echo remove %cd%\Lua
 			rmdir Lua /S /Q
+			del Lua.meta /Q
 		) else (
 			echo had remove %cd%\Lua
 		)
@@ -43,7 +54,7 @@ pushd u3d\Assets\Bsn\ThirdPart\tolua
 		pushd Source
 			if exist LuaConst.* (
 				echo remove %cd%\LuaConst.*
-				del LuaConst.* /S /Q
+				del LuaConst.* /Q
 			) else (
 				echo had remove %cd%\LuaConst.*
 			)
@@ -53,6 +64,7 @@ pushd u3d\Assets\Bsn\ThirdPart\tolua
 			if exist Examples (
 				echo remove %cd%\Examples
 				rmdir Examples /S /Q
+				del Examples.meta /Q
 			) else (
 				echo had remove %cd%\Examples
 			)
@@ -60,14 +72,14 @@ pushd u3d\Assets\Bsn\ThirdPart\tolua
 			pushd Editor
 				if exist ToLuaExport.* (
 					echo remove %cd%\ToLuaExport.*
-					del ToLuaExport.* /S /Q
+					del ToLuaExport.* /Q
 				) else (
 					echo had remove %cd%\ToLuaExport.*
 				)
 
 				if exist ToLuaMenu.* (
 					echo remove %cd%\ToLuaMenu.*
-					del ToLuaMenu.* /S /Q
+					del ToLuaMenu.* /Q
 				) else (
 					echo had remove %cd%\ToLuaMenu.*
 				)
