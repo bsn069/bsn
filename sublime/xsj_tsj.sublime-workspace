@@ -203,7 +203,7 @@
 			"file": "/F/github/bsn/.gitignore",
 			"settings":
 			{
-				"buffer_size": 657,
+				"buffer_size": 667,
 				"line_ending": "Windows"
 			}
 		},
@@ -219,7 +219,7 @@
 			"file": "/F/github/bsn/setup.bat",
 			"settings":
 			{
-				"buffer_size": 1539,
+				"buffer_size": 1748,
 				"line_ending": "Windows"
 			}
 		}
@@ -460,6 +460,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Editor",
 			"g_Mutex",
 			"log.Fatal",
 			"log.Println",
@@ -567,7 +568,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -576,15 +577,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 657,
+						"buffer_size": 667,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								237,
-								237
+								494,
+								494
 							]
 						],
 						"settings":
@@ -594,10 +595,10 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 570.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -636,15 +637,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1539,
+						"buffer_size": 1748,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								401,
-								401
+								275,
+								281
 							]
 						],
 						"settings":
@@ -658,7 +659,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
