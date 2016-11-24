@@ -2,8 +2,13 @@
 
 public static class LuaConst
 {
-    public static string luaDir = NBsn.Config.m_strLuaDir;                //lua逻辑代码目录
-    public static string toluaDir = Application.dataPath + "/Bsn/ThirdPart/tolua/Assets/ToLua/Lua";        //tolua lua文件目录
+    //lua逻辑代码目录
+    public static string luaDir = null;    
+    //tolua lua文件目录        
+    public static string toluaDir = null;  
+    
+  
+
 
 #if UNITY_STANDALONE
     public static string osDir = "Win";

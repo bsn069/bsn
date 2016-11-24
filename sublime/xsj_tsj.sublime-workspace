@@ -208,6 +208,14 @@
 			}
 		},
 		{
+			"file": "/F/github/bsn/u3d/Assets/Bsn/Script/Global.cs",
+			"settings":
+			{
+				"buffer_size": 3402,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "/F/github/bsn/setup.bat",
 			"settings":
 			{
@@ -300,9 +308,11 @@
 	[
 		"/F/github",
 		"/F/github/bsn",
-		"/F/github/bsn/gopath",
 		"/F/github/bsn/gopath/src",
-		"/F/github/bsn/u3d"
+		"/F/github/bsn/u3d",
+		"/F/github/bsn/u3d/Assets",
+		"/F/github/bsn/u3d/Assets/Bsn",
+		"/F/github/bsn/u3d/Assets/Bsn/Script"
 	],
 	"file_history":
 	[
@@ -576,8 +586,8 @@
 						"selection":
 						[
 							[
-								494,
-								494
+								482,
+								482
 							]
 						],
 						"settings":
@@ -587,7 +597,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 570.0,
+						"translation.y": 474.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -595,6 +605,36 @@
 				},
 				{
 					"buffer": 1,
+					"file": "/F/github/bsn/u3d/Assets/Bsn/Script/Global.cs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2694,
+								2694
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 1368.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "/F/github/bsn/setup.bat",
 					"semi_transient": false,
 					"settings":
@@ -606,8 +646,8 @@
 						"selection":
 						[
 							[
-								523,
-								523
+								514,
+								514
 							]
 						],
 						"settings":
@@ -621,7 +661,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

@@ -6,8 +6,12 @@ using System.Collections.Generic;
 namespace NBsn {
     [Reg2LuaAttribute]
     public static class Config {
-        //lua逻辑代码目录
-        public static string m_strLuaDir = Application.dataPath + "/Lua";
+        // 编辑器模式
+        public static bool ms_bEditorMode = true;
+        // 应用名称
+        public static string ms_appName = "bsn";
+        // 
+        public static int   ms_nFPS      = 30;  
 
         //在这里添加你要导出注册到lua的类型列表
         public static List<Type> m_reg2LuaType = new List<Type>{

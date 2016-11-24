@@ -8,23 +8,31 @@ namespace NBsn {
         public LuaReadFile() {
             instance = this;
             beZip = false;
-            Debug.LogFormat("Application.persistentDataPath={0}", Application.persistentDataPath);
-            Debug.LogFormat("Application.dataPath={0}", Application.dataPath);
-            Debug.LogFormat("Application.streamingAssetsPath={0}", Application.streamingAssetsPath);
-            Debug.LogFormat("Application.temporaryCachePath={0}", Application.temporaryCachePath);
         }
 
         /*
          * lua require  
          * LuaState.DoFile
          */
-        public override byte[] ReadFile(string fileName)
-        {
+        public override byte[] ReadFile(string fileName) {
+            Debug.LogFormat("LuaReadFile.ReadFile({0})", fileName);
             return base.ReadFile(fileName);
         }
 
         public override string FindFileError(string fileName) {
+            Debug.LogFormat("LuaReadFile.FindFileError({0})", fileName);
             return base.FindFileError(fileName);
+        }
+
+        public void ClearSearchPath() {
+            searchPaths.Clear();
+        }
+
+        public void ShowAll() {
+            Debug.Log("LuaReadFile.ShowAll");
+            for (int i = 0; i < searchPaths.Count; i++) {
+                Debug.LogFormat("{0}={1}", i, searchPaths[i]);
+            }
         }
     }
 }
