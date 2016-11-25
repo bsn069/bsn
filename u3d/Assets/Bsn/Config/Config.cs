@@ -13,6 +13,7 @@ namespace NBsn {
         // 
         public static int   ms_nFPS      = 30;  
 
+
         //在这里添加你要导出注册到lua的类型列表
         public static List<Type> m_reg2LuaType = new List<Type>{
         };

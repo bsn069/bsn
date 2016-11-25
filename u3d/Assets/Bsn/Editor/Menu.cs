@@ -8,6 +8,7 @@ using System.Text;
 using System.IO;
 using System.Diagnostics;
 using LuaInterface;
+using System.Threading; 
 
 using Object = UnityEngine.Object;
 using Debug = UnityEngine.Debug;
@@ -19,7 +20,7 @@ namespace NBsnEditor {
     public static class Menu {
         [MenuItem("Bsn/Test", false, 1)]
         public static void Bsn_Test() {
-            Debug.Log("NBsnEditor.Menu Bsn_Test()");
+            Debug.Log("NBsnEditor.Menu.Bsn_Test()");
 
             Assembly assembly = Assembly.Load("Assembly-CSharp");
             Type[] types = assembly.GetExportedTypes();
@@ -30,7 +31,60 @@ namespace NBsnEditor {
 			}
         }
 
-        [MenuItem("Bsn/All", false, 51)]
+        #region build
+        static string[] strSrcPath = new string[] {
+            Application.dataPath + "/Bsn/ThirdPart/tolua/Assets/Plugins/x86/tolua.dll", 
+            Application.dataPath + "/Bsn/ThirdPart/tolua/Assets/Plugins/Android/libs/x86/libtolua.so", 
+        };
+        static string[] strAndriodPath = new string[] {
+            Application.dataPath + "/Bsn/ThirdPart/tolua/Assets/Plugins/x86/tolua_back.dll",
+            Application.dataPath + "/Bsn/ThirdPart/tolua/Assets/Plugins/Android/libs/x86/libtolua_back.so",
+        };
+
+        [MenuItem("Bsn/Build/Win32", false, 1)]
+        public static void Bsn_BuildWin32() {
+            Debug.Log("NBsnEditor.Menu.Bsn_BuildWin32()");
+            for (int i = 0; i < strAndriodPath.Length; i++) {
+                FileInfo fInfo = new FileInfo(strAndriodPath[i]);
+                if (fInfo.Exists) {
+                    fInfo.MoveTo(strSrcPath[i]);
+                }
+            }
+            AssetDatabase.Refresh();
+
+            Builder.Bsn_Build(BuildTarget.StandaloneWindows);
+        }
+
+        [MenuItem("Bsn/Build/Win64", false, 2)]
+        public static void Bsn_BuildWin64() {
+            Debug.Log("NBsnEditor.Menu.Bsn_BuildWin64()");
+            Builder.Bsn_Build(BuildTarget.StandaloneWindows64);
+        }
+
+        [MenuItem("Bsn/Build/Android", false, 3)]
+        public static void Bsn_Android() {
+            Debug.Log("NBsnEditor.Menu.Bsn_Android()");
+
+            for (int i = 0; i < strAndriodPath.Length; i++) {
+                FileInfo fInfo = new FileInfo(strSrcPath[i]);
+                if (fInfo.Exists) {
+                    fInfo.MoveTo(strAndriodPath[i]);
+                }
+            }
+            AssetDatabase.Refresh();
+
+            Builder.Bsn_Build(BuildTarget.Android);
+
+            for (int i = 0; i < strAndriodPath.Length; i++) {
+                FileInfo fInfo = new FileInfo(strAndriodPath[i]);
+                if (fInfo.Exists) {
+                    fInfo.MoveTo(strSrcPath[i]);
+                }
+            }
+        }
+        #endregion
+
+        [MenuItem("Bsn/All", false, 101)]
         public static void Bsn_All() {
             Debug.Log("NBsnEditor.Menu Bsn_All()");
 

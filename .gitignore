@@ -37,6 +37,7 @@ u3d/[Bb]uild/
 u3d/[Bb]uilds/
 u3d/Assets/AssetStoreTools*
 u3d/Assets/Bsn/ThirdPart/tolua
+u3d/Out/*
 
 *.csproj
 *.unityproj
