@@ -31,6 +31,54 @@ namespace NBsnEditor {
 			}
         }
 
+        #region AssertBundle one
+        [MenuItem("Bsn/AssertBundleScene/Win32", false, 1)]
+        public static void Bsn_ABSceneWin32() {
+            Debug.Log("NBsnEditor.Menu.Bsn_ABSceneWin32()");
+            AssetBuddleBuilder.Scene(BuildTarget.StandaloneWindows);
+        }
+        #endregion
+
+        #region AssertBundle one
+        [MenuItem("Bsn/AssertBundleOne/Win32", false, 1)]
+        public static void Bsn_ABOneWin32() {
+            Debug.Log("NBsnEditor.Menu.Bsn_ABOneWin32()");
+            AssetBuddleBuilder.One(BuildTarget.StandaloneWindows);
+        }
+
+        [MenuItem("Bsn/AssertBundleOne/Win64", false, 2)]
+        public static void Bsn_ABOneWin64() {
+            Debug.Log("NBsnEditor.Menu.Bsn_ABOneWin64()");
+            AssetBuddleBuilder.One(BuildTarget.StandaloneWindows64);
+        }
+
+        [MenuItem("Bsn/AssertBundleOne/Android", false, 3)]
+        public static void Bsn_ABOneAndroid() {
+            Debug.Log("NBsnEditor.Menu.Bsn_ABOneAndroid()");
+            AssetBuddleBuilder.One(BuildTarget.Android);
+        }
+        #endregion
+
+        #region AssertBundle all
+        [MenuItem("Bsn/AssertBundleAll/Win32", false, 1)]
+        public static void Bsn_ABAllWin32() {
+            Debug.Log("NBsnEditor.Menu.Bsn_ABAllWin32()");
+            AssetBuddleBuilder.All(BuildTarget.StandaloneWindows);
+        }
+
+        [MenuItem("Bsn/AssertBundleAll/Win64", false, 2)]
+        public static void Bsn_ABAllWin64() {
+            Debug.Log("NBsnEditor.Menu.Bsn_ABAllWin64()");
+            AssetBuddleBuilder.All(BuildTarget.StandaloneWindows64);
+        }
+
+        [MenuItem("Bsn/AssertBundleAll/Android", false, 3)]
+        public static void Bsn_ABAllAndroid() {
+            Debug.Log("NBsnEditor.Menu.Bsn_ABAllAndroid()");
+            AssetBuddleBuilder.All(BuildTarget.Android);
+        }
+        #endregion
+
         #region build
         static string[] strSrcPath = new string[] {
             Application.dataPath + "/Bsn/ThirdPart/tolua/Assets/Plugins/x86/tolua.dll", 
