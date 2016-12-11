@@ -29,6 +29,8 @@ _testmain.go
 gopath/src/github.com
 gopath/pkg
 gopath/bin
+gopath/src/sourcegraph.com
+gopath/src/golang.org
 *.exe~
 
 u3d/[Ll]ibrary/
