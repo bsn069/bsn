@@ -18,7 +18,7 @@ func (this *SGlobal) Start() {
 
 func (this *SGlobal) Stop() {
     fmt.Println("stop client")
-    this.clientMgr().StopListen()
+    this.uninitGate()
 }
 
 func (this *SGlobal) run()  {
