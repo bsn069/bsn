@@ -12,8 +12,9 @@ type SGlobal struct {
 func (this *SGlobal) Start() {
     fmt.Println("start gate")
 
-    this.clientMgr().SetAddr(":50000")
-    err := this.clientMgr().Listen()
+    this.clientMgr().init()
+    this.clientMgr().setAddr(":50000")
+    err := this.clientMgr().startListen()
     if err != nil {
         fmt.Println(err)
         return
@@ -24,7 +25,8 @@ func (this *SGlobal) Start() {
 
 func (this *SGlobal) Stop() {
     fmt.Println("stop gate")
-    this.clientMgr().StopListen()
+    this.clientMgr().stopListen()
+    fmt.Println("stop gate end")
 }
 
 func (this *SGlobal) run()  {
