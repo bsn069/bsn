@@ -32,19 +32,19 @@ namespace NBsn {
 
         void Update() {
 #if UNITY_EDITOR
-            if (NBsn.Global.m_luaState == null) {
+            if (NBsn.Global.ms_luaState == null) {
                 Debug.LogError("NBsn.LuaLooper Update m_luaState == null"); 
                 return;
             }
 #endif
-            if (NBsn.Global.m_luaState.LuaUpdate(Time.deltaTime, Time.unscaledDeltaTime) != 0) {
+            if (NBsn.Global.ms_luaState.LuaUpdate(Time.deltaTime, Time.unscaledDeltaTime) != 0) {
                 NBsn.Global.ThrowException();
             }
 
-            NBsn.Global.m_luaState.LuaPop(1);
-            NBsn.Global.m_luaState.Collect();
+            NBsn.Global.ms_luaState.LuaPop(1);
+            NBsn.Global.ms_luaState.Collect();
 #if UNITY_EDITOR
-            if (!NBsn.Global.m_luaState.CheckTop()) {
+            if (!NBsn.Global.ms_luaState.CheckTop()) {
                 Debug.LogError("NBsn.LuaLooper Update !m_luaState.CheckTop()"); 
                 return;
             }
@@ -53,18 +53,18 @@ namespace NBsn {
 
         void LateUpdate() {
 #if UNITY_EDITOR
-            if (NBsn.Global.m_luaState == null) {
+            if (NBsn.Global.ms_luaState == null) {
                 Debug.LogError("NBsn.LuaLooper LateUpdate m_luaState == null"); 
                 return;
             }
 #endif
-            if (NBsn.Global.m_luaState.LuaLateUpdate() != 0) {
+            if (NBsn.Global.ms_luaState.LuaLateUpdate() != 0) {
                 NBsn.Global.ThrowException();
             }
 
-            NBsn.Global.m_luaState.LuaPop(1);
+            NBsn.Global.ms_luaState.LuaPop(1);
 #if UNITY_EDITOR
-            if (!NBsn.Global.m_luaState.CheckTop()) {
+            if (!NBsn.Global.ms_luaState.CheckTop()) {
                 Debug.LogError("NBsn.LuaLooper LateUpdate !m_luaState.CheckTop()"); 
                 return;
             }
@@ -73,18 +73,18 @@ namespace NBsn {
 
         void FixedUpdate() {
 #if UNITY_EDITOR
-            if (NBsn.Global.m_luaState == null) {
+            if (NBsn.Global.ms_luaState == null) {
                 Debug.LogError("NBsn.LuaLooper FixedUpdate m_luaState == null"); 
                 return;
             }
 #endif
-            if (NBsn.Global.m_luaState.LuaFixedUpdate(Time.fixedDeltaTime) != 0) {
+            if (NBsn.Global.ms_luaState.LuaFixedUpdate(Time.fixedDeltaTime) != 0) {
                 NBsn.Global.ThrowException();
             }
 
-            NBsn.Global.m_luaState.LuaPop(1);
+            NBsn.Global.ms_luaState.LuaPop(1);
 #if UNITY_EDITOR
-            if (!NBsn.Global.m_luaState.CheckTop()) {
+            if (!NBsn.Global.ms_luaState.CheckTop()) {
                 Debug.LogError("NBsn.LuaLooper FixedUpdate !m_luaState.CheckTop()"); 
                 return;
             }

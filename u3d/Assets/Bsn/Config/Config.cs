@@ -7,11 +7,14 @@ namespace NBsn {
     [Reg2LuaAttribute]
     public static class Config {
         // 编辑器模式
-        public static bool ms_bEditorMode = true;
+        public static bool ms_bEditorMode = true; // 废除
         // 应用名称
-        public static string ms_appName = "bsn";
+        public static string ms_appName = "bsn"; // 废除
         // 
         public static int   ms_nFPS      = 30;  
+        // 是否使用服务器资源
+        // 非编辑器模式下 总为true
+        public static bool ms_bUseServerRes = true;
 
 
         //在这里添加你要导出注册到lua的类型列表

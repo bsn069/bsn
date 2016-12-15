@@ -8,11 +8,10 @@ namespace NBsn {
 
     [Reg2LuaAttribute]
     public static class Global {
-        public static LuaState          m_luaState  = null;
-        public static GameObject        m_goMain    = null;
-        public static NBsn.Main         m_Main      = null;
-        public static NBsn.LuaLooper    m_luaLooper = null;
-        public static string            ms_appPath  = null;
+        public static LuaState          ms_luaState  = null;
+        public static GameObject        ms_goMain    = null;
+        public static NBsn.Main         ms_Main      = null;
+        public static NBsn.LuaLooper    ms_luaLooper = null;
 
         #region init
         public static void InitConfig() {
@@ -22,27 +21,29 @@ namespace NBsn {
             Debug.LogFormat("Application.dataPath={0}", Application.dataPath);
             Debug.LogFormat("Application.streamingAssetsPath={0}", Application.streamingAssetsPath);
             Debug.LogFormat("Application.temporaryCachePath={0}", Application.temporaryCachePath);
-            Debug.LogFormat("Config.ms_bEditorMode={0}", Config.ms_bEditorMode); 
 
-            string path = Application.persistentDataPath;
-            if (Config.ms_bEditorMode) {
-                LuaConst.luaDir = string.Format("{0}/Lua", Application.dataPath);
+#if UNITY_EDITOR
+            if (!Config.ms_bUseServerRes) {
+                LuaConst.luaDir = Application.dataPath + "/Lua";
                 LuaConst.toluaDir = Application.dataPath + "/Bsn/ThirdPart/tolua/Assets/ToLua/Lua";  
             }
-            else {
-                Global.ms_appPath = string.Format("{0}/{1}", Application.persistentDataPath, Config.ms_appName);
-                LuaConst.luaDir = string.Format("{0}/Lua", Global.ms_appPath);
-                LuaConst.toluaDir = string.Format("{0}/ToLua", Global.ms_appPath);
+#else
+            Config.ms_bUseServerRes = true;
+#endif
+            if (Config.ms_bUseServerRes) {
+                LuaConst.luaDir = Application.persistentDataPath + "/Data/Lua";
+                LuaConst.toluaDir = Application.persistentDataPath + "/Data/ToLua";  
             }
-            Debug.LogFormat("Global.ms_appPath={0}", Global.ms_appPath); 
+
+            Debug.LogFormat("Config.ms_bUseServerRes={0}", Config.ms_bUseServerRes); 
             Debug.LogFormat("LuaConst.luaDir={0}", LuaConst.luaDir); 
             Debug.LogFormat("LuaConst.toluaDir={0}", LuaConst.toluaDir); 
         }
 
         public static void Init(GameObject goMain, NBsn.Main Main) {
             Debug.LogFormat("NBsn.Global Init goMain={0}", goMain); 
-            Global.m_goMain    = goMain;
-            Global.m_Main      = Main;
+            Global.ms_goMain    = goMain;
+            Global.ms_Main      = Main;
 
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
             Application.targetFrameRate = Config.ms_nFPS;
@@ -53,8 +54,8 @@ namespace NBsn {
         public static void Uninit() {
             Debug.Log("NBsn.Global Uninit"); 
  
-            Global.m_goMain    = null;
-            Global.m_Main      = null;
+            Global.ms_goMain    = null;
+            Global.ms_Main      = null;
 
             Global.UninitLua();
         }
@@ -67,16 +68,18 @@ namespace NBsn {
         #region
         public static void UpdateRes() {
             Debug.Log("NBsn.Global UpdateRes"); 
-            if (Config.ms_bEditorMode) {
-                Global.UpdateResSuccess();
-            }
-            // todo: update res
+            var updateRes = new CUpdateRes();
+            updateRes.Start();
         }
 
         public static void UpdateResSuccess() {
             Debug.Log("NBsn.Global UpdateResSuccess"); 
-
             Global.InitLua();
+        }
+
+        public static void UpdateResFail() {
+            Debug.Log("NBsn.Global UpdateResFail"); 
+            Application.Quit();
         }
         #endregion
 
@@ -84,54 +87,58 @@ namespace NBsn {
         public static void InitLua() {
             Debug.Log("NBsn.Global InitLua"); 
             var luaReadFile = new LuaReadFile();
-            Global.m_luaState  = new LuaState();
+            Global.ms_luaState  = new LuaState();
             luaReadFile.ClearSearchPath();
-            Global.m_luaState.AddSearchPath(LuaConst.toluaDir);
+            Global.ms_luaState.AddSearchPath(LuaConst.toluaDir);
             luaReadFile.ShowAll();
  
-            Global.m_luaState.OpenLibs(LuaDLL.luaopen_pb);      
-            Global.m_luaState.OpenLibs(LuaDLL.luaopen_lpeg);
-            Global.m_luaState.OpenLibs(LuaDLL.luaopen_bit);
-            Global.m_luaState.OpenLibs(LuaDLL.luaopen_socket_core);
+            Global.ms_luaState.OpenLibs(LuaDLL.luaopen_pb);      
+            Global.ms_luaState.OpenLibs(LuaDLL.luaopen_lpeg);
+            Global.ms_luaState.OpenLibs(LuaDLL.luaopen_bit);
+            Global.ms_luaState.OpenLibs(LuaDLL.luaopen_socket_core);
  
-            Global.m_luaState.LuaGetField(LuaIndexes.LUA_REGISTRYINDEX, "_LOADED");
-            Global.m_luaState.OpenLibs(LuaDLL.luaopen_cjson);
-            Global.m_luaState.LuaSetField(-2, "cjson");
+            Global.ms_luaState.LuaGetField(LuaIndexes.LUA_REGISTRYINDEX, "_LOADED");
+            Global.ms_luaState.OpenLibs(LuaDLL.luaopen_cjson);
+            Global.ms_luaState.LuaSetField(-2, "cjson");
  
-            Global.m_luaState.OpenLibs(LuaDLL.luaopen_cjson_safe);
-            Global.m_luaState.LuaSetField(-2, "cjson.safe");
+            Global.ms_luaState.OpenLibs(LuaDLL.luaopen_cjson_safe);
+            Global.ms_luaState.LuaSetField(-2, "cjson.safe");
     
-            Global.m_luaState.LuaSetTop(0);
-            LuaBinder.Bind(Global.m_luaState);
-            LuaCoroutine.Register(Global.m_luaState, Global.m_Main);
+            Global.ms_luaState.LuaSetTop(0);
+            LuaBinder.Bind(Global.ms_luaState);
+            LuaCoroutine.Register(Global.ms_luaState, Global.ms_Main);
   
-            Global.m_luaState.Start();
+            Global.ms_luaState.Start();
    
             luaReadFile.ClearSearchPath();
-            Global.m_luaState.AddSearchPath(LuaConst.luaDir);
+            Global.ms_luaState.AddSearchPath(LuaConst.luaDir);
             luaReadFile.ShowAll();
-            Global.m_luaState.DoFile("Main");
-            LuaFunction main = m_luaState.GetFunction("Main");
+            Global.ms_luaState.DoFile("Main");
+            LuaFunction main = ms_luaState.GetFunction("Main");
             main.Call();
             main.Dispose();
             main = null;   
  
-            Global.m_luaLooper = Global.m_goMain.AddComponent<NBsn.LuaLooper>();
+            Global.ms_luaLooper = Global.ms_goMain.AddComponent<NBsn.LuaLooper>();
         }
 
         public static void UninitLua() {
             Debug.Log("NBsn.Global UninitLua"); 
-            Global.m_luaLooper.Dispose();
-            Global.m_luaLooper = null;
+            if (Global.ms_luaLooper != null) {
+                Global.ms_luaLooper.Dispose();
+                Global.ms_luaLooper = null;
+            }
  
-            Global.m_luaState.Dispose();
-            Global.m_luaState = null;  
+            if (Global.ms_luaState != null) {
+                Global.ms_luaState.Dispose();
+                Global.ms_luaState = null;  
+            }
         }
 
         public static void ThrowException() {
             Debug.Log("NBsn.Global ThrowException"); 
-            string error = m_luaState.LuaToString(-1);
-            Global.m_luaState.LuaPop(2);                
+            string error = ms_luaState.LuaToString(-1);
+            Global.ms_luaState.LuaPop(2);                
             throw new LuaException(error, LuaException.GetLastError());
         }
         #endregion

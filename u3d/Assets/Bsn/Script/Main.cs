@@ -25,5 +25,6 @@ namespace NBsn {
             Debug.LogFormat("NBsn.Main OnDestroy"); 
             NBsn.Global.Uninit();
         }
+
     }
 }
