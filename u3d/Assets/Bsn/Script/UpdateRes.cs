@@ -4,6 +4,7 @@ using LuaInterface;
 using System.Runtime.InteropServices;
 using System;
 using System.IO;
+using System.Collections.Generic;
 
 namespace NBsn {
 
@@ -58,6 +59,7 @@ namespace NBsn {
                 yield break;
             }
 
+            List<string> strNeedDownloadFilePath = new List<string>();
             string strLine = null;
             string[] strLineData = null;
             while (true) {
@@ -67,22 +69,37 @@ namespace NBsn {
                 }
                 Debug.Log(strLine);
                 strLineData = strLine.Split(',');
-                foreach (var item in strLineData) {
-                    Debug.Log(item);
+                if (strLineData.Length == 2) {
+                    foreach (var item in strLineData) {
+                        Debug.Log(item);
+                    }
+                    strNeedDownloadFilePath.Add(strLineData[0]);
                 }
             }
 
-            Debug.Log("LuaConst.luaDir files");
-            var strLuaFiles = Directory.GetFiles(LuaConst.luaDir);
-            foreach (var item in strLuaFiles) {
-                Debug.Log(item);
+            foreach (var item in strNeedDownloadFilePath) {
+                www = Global.NewServerResWWW(item);
+                while (!www.isDone) { 
+                    yield return null; 
+                }
+                if (www.error != null) {
+                    m_strError = "";
+                    Debug.LogErrorFormat("www.error={0}", www.error);
+                    yield break;
+                }
             }
 
-            Debug.Log("LuaConst.toluaDir files");
-            var strToLuaFiles = Directory.GetFiles(LuaConst.toluaDir, "*", SearchOption.AllDirectories);
-            foreach (var item in strToLuaFiles) {
-                Debug.Log(item);
-            }
+            // Debug.Log("LuaConst.luaDir files");
+            // var strLuaFiles = Directory.GetFiles(LuaConst.luaDir);
+            // foreach (var item in strLuaFiles) {
+            //     Debug.Log(item);
+            // }
+
+            // Debug.Log("LuaConst.toluaDir files");
+            // var strToLuaFiles = Directory.GetFiles(LuaConst.toluaDir, "*", SearchOption.AllDirectories);
+            // foreach (var item in strToLuaFiles) {
+            //     Debug.Log(item);
+            // }
         }
     }
 }

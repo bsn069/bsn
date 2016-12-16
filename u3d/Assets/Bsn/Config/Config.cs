@@ -17,7 +17,8 @@ namespace NBsn {
         public static bool ms_bUseServerRes = true;
         // 服务器资源根目录http://172.18.100.47:10000/static/u3d/
         public static string ms_strServerResUrl = "http://172.18.100.47:10000/static/u3d/";
-
+        // 服务器资源 下载到本地的根目录
+        public static string ms_strServerResPath = "ServerRes";
 
         //在这里添加你要导出注册到lua的类型列表
         public static List<Type> m_reg2LuaType = new List<Type>{

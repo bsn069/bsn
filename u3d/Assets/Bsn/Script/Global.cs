@@ -12,6 +12,8 @@ namespace NBsn {
         public static GameObject        ms_goMain    = null;
         public static NBsn.Main         ms_Main      = null;
         public static NBsn.LuaLooper    ms_luaLooper = null;
+        // 服务器资源 下载到本地的根目录
+        public static string            ms_strServerResPath = null;
 
         #region init
         public static void InitConfig() {
@@ -32,6 +34,7 @@ namespace NBsn {
             Config.ms_bUseServerRes = true;
 #endif
             if (Config.ms_bUseServerRes) {
+                ms_strServerResPath;
                 LuaConst.luaDir = Application.persistentDataPath + "/ServerRes/Lua";
                 LuaConst.toluaDir = Application.persistentDataPath + "/ServerRes/ToLua";  
             }
