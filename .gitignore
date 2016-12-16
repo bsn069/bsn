@@ -3,6 +3,7 @@ nogit
 
 vscode/sample/out
 vscode/sample/node_modules
+gopath/src/u3d_update/static/u3d
 
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o

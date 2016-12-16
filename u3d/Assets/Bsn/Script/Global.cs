@@ -21,6 +21,7 @@ namespace NBsn {
             Debug.LogFormat("Application.dataPath={0}", Application.dataPath);
             Debug.LogFormat("Application.streamingAssetsPath={0}", Application.streamingAssetsPath);
             Debug.LogFormat("Application.temporaryCachePath={0}", Application.temporaryCachePath);
+            Debug.LogFormat("LuaConst.osDir={0}", LuaConst.osDir);
 
 #if UNITY_EDITOR
             if (!Config.ms_bUseServerRes) {
@@ -31,11 +32,14 @@ namespace NBsn {
             Config.ms_bUseServerRes = true;
 #endif
             if (Config.ms_bUseServerRes) {
-                LuaConst.luaDir = Application.persistentDataPath + "/Data/Lua";
-                LuaConst.toluaDir = Application.persistentDataPath + "/Data/ToLua";  
+                LuaConst.luaDir = Application.persistentDataPath + "/ServerRes/Lua";
+                LuaConst.toluaDir = Application.persistentDataPath + "/ServerRes/ToLua";  
             }
 
+            Config.ms_strServerResUrl += LuaConst.osDir + "/";
+
             Debug.LogFormat("Config.ms_bUseServerRes={0}", Config.ms_bUseServerRes); 
+            Debug.LogFormat("Config.ms_strServerResUrl={0}", Config.ms_strServerResUrl);
             Debug.LogFormat("LuaConst.luaDir={0}", LuaConst.luaDir); 
             Debug.LogFormat("LuaConst.toluaDir={0}", LuaConst.toluaDir); 
         }
@@ -140,6 +144,14 @@ namespace NBsn {
             string error = ms_luaState.LuaToString(-1);
             Global.ms_luaState.LuaPop(2);                
             throw new LuaException(error, LuaException.GetLastError());
+        }
+        #endregion
+
+        #region
+        public static WWW NewServerResWWW(string pathName) {
+            string strUrl = Config.ms_strServerResUrl + pathName;
+            Debug.LogFormat("NBsn.Global NewServerResWWW strUrl={0}", strUrl); 
+            return new WWW(strUrl);
         }
         #endregion
     }

@@ -6,18 +6,15 @@ public static class LuaConst
     public static string luaDir = null;    
     //tolua lua文件目录        
     public static string toluaDir = null;  
-    
-  
-
 
 #if UNITY_STANDALONE
     public static string osDir = "Win";
 #elif UNITY_ANDROID
     public static string osDir = "Android";            
 #elif UNITY_IPHONE
-    public static string osDir = "iOS";        
+    public static string osDir = "IOS";        
 #else
-    public static string osDir = "";        
+    public static string osDir = "Unknown";        
 #endif
 
     public static string luaResDir = string.Format("{0}/{1}/Lua", Application.persistentDataPath, osDir);      //手机运行时lua文件下载目录    

@@ -15,6 +15,8 @@ namespace NBsn {
         // 是否使用服务器资源
         // 非编辑器模式下 总为true
         public static bool ms_bUseServerRes = true;
+        // 服务器资源根目录http://172.18.100.47:10000/static/u3d/
+        public static string ms_strServerResUrl = "http://172.18.100.47:10000/static/u3d/";
 
 
         //在这里添加你要导出注册到lua的类型列表
