@@ -10,10 +10,14 @@ type SClientMgr struct {
 	M_Listener      net.Listener
 	M_strListenAddr string
 	M_chanWaitStopListen chan bool
+	M_clients []SClient
+	m_u16ClientCountMax uint16
 }
 
 func (this *SClientMgr) init()  {
+	this.m_u16ClientCountMax = 100
 	this.M_chanWaitStopListen = make(chan bool, 1)
+	this.M_clients = make([]SClient, 0, this.m_u16ClientCountMax)
 }
 
 func (this *SClientMgr) addr() string {
@@ -65,8 +69,27 @@ func (this *SClientMgr) listenWorker()  {
 			fmt.Println(err)
 			break
 		}
-		vConn.Close()
+		this.onAccept(vConn)
 	}
 	this.M_chanWaitStopListen <- true
 	fmt.Println("listenWorker end")
+}
+
+func (this *SClientMgr) onAccept(iConn net.Conn) {
+	var vClient *SClient
+	for i := 0; i < len(this.M_clients); i++ {
+		vClient = &this.M_clients[i]
+		if vClient.Id() == 0 {
+			vClient.SetId(i+1)
+			vClient.SetConn(iConn)
+			break
+		}
+	}
+
+	if vClient.Id() != 0 { 
+		return
+	}	
+
+	// todo: gate 满了 重定向
+	iConn.Close()
 }
