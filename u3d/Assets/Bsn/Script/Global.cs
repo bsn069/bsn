@@ -12,8 +12,8 @@ namespace NBsn {
         public static GameObject        ms_goMain    = null;
         public static NBsn.Main         ms_Main      = null;
         public static NBsn.LuaLooper    ms_luaLooper = null;
-        // 服务器资源 下载到本地的根目录
-        public static string            ms_strServerResPath = null;
+        // 资源本地根目录
+        public static string            ms_strResLocalPath = null;
 
         #region init
         public static void InitConfig() {
@@ -27,24 +27,29 @@ namespace NBsn {
 
 #if UNITY_EDITOR
             if (!Config.ms_bUseServerRes) {
-                LuaConst.luaDir = Application.dataPath + "/Lua";
-                LuaConst.toluaDir = Application.dataPath + "/Bsn/ThirdPart/tolua/Assets/ToLua/Lua";  
+                ms_strResLocalPath = Application.dataPath + "/";
+                LuaConst.luaDir = ms_strResLocalPath + "Lua";
+                LuaConst.toluaDir = ms_strResLocalPath + "Bsn/ThirdPart/tolua/Assets/ToLua/Lua";  
             }
 #else
             Config.ms_bUseServerRes = true;
 #endif
             if (Config.ms_bUseServerRes) {
-                ms_strServerResPath;
-                LuaConst.luaDir = Application.persistentDataPath + "/ServerRes/Lua";
-                LuaConst.toluaDir = Application.persistentDataPath + "/ServerRes/ToLua";  
+                Config.ms_strServerResUrl += LuaConst.osDir + "/";
+                ms_strResLocalPath = Application.persistentDataPath + "/" + Config.ms_strServerResLocalDirName + "/";
+                LuaConst.luaDir = ms_strResLocalPath + "Lua";
+                LuaConst.toluaDir = ms_strResLocalPath + "ToLua"; 
             }
-
-            Config.ms_strServerResUrl += LuaConst.osDir + "/";
 
             Debug.LogFormat("Config.ms_bUseServerRes={0}", Config.ms_bUseServerRes); 
             Debug.LogFormat("Config.ms_strServerResUrl={0}", Config.ms_strServerResUrl);
+            Debug.LogFormat("Global.ms_strResLocalPath={0}", Global.ms_strResLocalPath); 
             Debug.LogFormat("LuaConst.luaDir={0}", LuaConst.luaDir); 
             Debug.LogFormat("LuaConst.toluaDir={0}", LuaConst.toluaDir); 
+        }
+
+        public static string GetResLocalPath(string strFilePath) {
+            return Global.ms_strResLocalPath + strFilePath;
         }
 
         public static void Init(GameObject goMain, NBsn.Main Main) {

@@ -3,7 +3,7 @@ local Time = Time
 
 local fl_tUpdate = {name="fl_tUpdate"}
 function fl_tUpdate:Update()
-	-- print(self.name, Time.deltaTime, Time.unscaledDeltaTime)
+	print(self.name, Time.deltaTime, Time.unscaledDeltaTime)
 end
 
 --主入口函数。从这里开始lua逻辑
@@ -24,8 +24,6 @@ function OnLevelWasLoaded(level)
 end
 
 function Test( ... )
-
- 
 	local Color = UnityEngine.Color
     local GameObject = UnityEngine.GameObject
     local ParticleSystem = UnityEngine.ParticleSystem
