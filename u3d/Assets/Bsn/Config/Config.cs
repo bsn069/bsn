@@ -12,15 +12,20 @@ namespace NBsn {
         public static string ms_appName = "bsn"; // 废除
         // 
         public static int   ms_nFPS      = 30;  
-        // 是否使用服务器资源
-        // 非编辑器模式下 总为true
-        public static bool ms_bUseServerRes = true;
+
+        // 编辑器模式下使用本地资源 
+        public static bool      ms_bUseLocalResInEditor = true;
+
         // 服务器资源根目录http://172.18.100.47:10000/static/u3d/
-        public static string ms_strServerResUrl = "http://172.18.100.47:10000/static/u3d/";
-        // 服务器资源 下载到本地的目录名
-        public static string ms_strServerResLocalDirName = "ServerRes";
+        public static string    ms_strServerResUrl = "http://172.18.100.47:10000/static/u3d/";
+        // 服务器资源 下载到本地的根目录名
+        public static string    ms_strServerResLocalDirName = "ServerRes";
+
+        // 是否使用AB资源
+        public static bool      ms_bUseAB = false;
+        // AB存放相对目录格式化
         // {0} strPlatform[Win, Android]
-        public static string ms_strPlatformABPathFormat = "ABOut/{0}/AB";
+        public static string    ms_strPlatformABPathFormat = "ABOut/{0}/AB";
 
         //在这里添加你要导出注册到lua的类型列表
         public static List<Type> m_reg2LuaType = new List<Type>{
@@ -30,5 +35,15 @@ namespace NBsn {
         //unity 有些类作为sealed class, 其实完全等价于静态类
         public static List<Type> m_reg2LuaStaticType = new List<Type>{
         };
+
+        public static string GetPlatformName() {
+            #if UNITY_STANDALONE
+                return "Win";
+            #elif UNITY_ANDROID
+                return "Android";            
+            #else
+                return null;        
+            #endif
+        }
     }
 }

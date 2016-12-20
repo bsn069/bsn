@@ -7,27 +7,13 @@ namespace NBsnEditor {
     public static class AssetBuddleBuilder  {
         public static string GetOutFullPath(BuildTarget buildTarget) {
             Debug.LogFormat("NBsnEditor.AssetBuddleBuilder.GetOutFullPath({0})", buildTarget);
-            string strPlatform = "";
-            switch (buildTarget) {
-                case BuildTarget.Android: {
-                        strPlatform = "Android";
-                    } 
-                    break;               
-                case BuildTarget.StandaloneWindows:
-                case BuildTarget.StandaloneWindows64: {
-                        strPlatform = "Win";
-                    }
-                    break;              
-                default: {
-                        Debug.LogErrorFormat("unknown buildTarget={0}", buildTarget);
-                        return null;
-                    }
-            }
-
-            var strPlatformABPath = string.Format(NBsn.Config.ms_strPlatformABPathFormat, strPlatform);
+            
+            string strPlatform = NBsnEditor.CConfig.GetPlatformName(buildTarget);
+            NBsn.Global.InitConfig(strPlatform);
+            
             var strOutFullPath = string.Format("{0}/{1}"
                 , Application.dataPath
-                , strPlatformABPath
+                ,NBsn.Global.ms_strPlatformABPath
             );
             Debug.LogFormat("strOutFullPath={0}", strOutFullPath);
             Directory.CreateDirectory(strOutFullPath);

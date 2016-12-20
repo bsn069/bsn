@@ -19,7 +19,7 @@ namespace NBsn {
 
         private IEnumerator CoroutineUpdate() {
             Debug.Log("CoroutineUpdate()");
-            if (!Config.ms_bUseServerRes) {
+            if (!Global.ms_bUpdateRes) {
                 goto Exit0;
             }
 
@@ -57,7 +57,7 @@ namespace NBsn {
                     yield break;
                 }
 
-                strLocalPath = Global.GetResLocalPath(strFilePath);
+                strLocalPath = Global.GetResLocalFullPath(strFilePath);
                 Debug.LogFormat("strLocalPath={0}", strLocalPath);
 
                 if (File.Exists(strLocalPath)) {

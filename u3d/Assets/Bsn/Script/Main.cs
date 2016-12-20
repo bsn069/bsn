@@ -8,7 +8,7 @@ namespace NBsn {
         void Awake() {
             Debug.LogFormat("NBsn.Main Awake"); 
             DontDestroyOnLoad(gameObject);  //防止销毁自己
-            NBsn.Global.InitConfig();
+            NBsn.Global.InitConfig(NBsn.Config.GetPlatformName());
         }
 
         void Start() {

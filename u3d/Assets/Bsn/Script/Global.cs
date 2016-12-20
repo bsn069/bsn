@@ -12,44 +12,83 @@ namespace NBsn {
         public static GameObject        ms_goMain    = null;
         public static NBsn.Main         ms_Main      = null;
         public static NBsn.LuaLooper    ms_luaLooper = null;
-        // 资源本地根目录
-        public static string            ms_strResLocalPath = null;
+        
+        // 平台名
+        public static string    ms_strPlatformName = null;
+        // 资源根目录 本地全路径
+        public static string    ms_strResLocalFullPath = null;
+        // AB根目录 相对资源路径 
+        public static string    ms_strPlatformABPath = null;
+        // AB根目录 本地全路径
+        public static string    ms_strABLocalFullPath = null;
+
+        public static string    ms_strLuaLocalFullPath = null;
+        public static string    ms_strToLuaLocalFullPath = null;
+
+        public static bool      ms_bUpdateRes = true;
+
 
         #region init
-        public static void InitConfig() {
-            Debug.LogFormat("NBsn.Global InitConfig"); 
+        public static void InitConfig(string strPlatformName) {
+            Debug.LogFormat("NBsn.Global InitConfig strPlatformName={0}", strPlatformName); 
 
             Debug.LogFormat("Application.persistentDataPath={0}", Application.persistentDataPath);
             Debug.LogFormat("Application.dataPath={0}", Application.dataPath);
             Debug.LogFormat("Application.streamingAssetsPath={0}", Application.streamingAssetsPath);
             Debug.LogFormat("Application.temporaryCachePath={0}", Application.temporaryCachePath);
+
+            ms_strPlatformName = strPlatformName;
+            Debug.LogFormat("ms_strPlatformName={0}", ms_strPlatformName); 
+
+            ms_strPlatformABPath = string.Format(
+                NBsn.Config.ms_strPlatformABPathFormat
+                , ms_strPlatformName
+                );
+            Debug.LogFormat("NBsn.Config.ms_strPlatformABPathFormat={0}", NBsn.Config.ms_strPlatformABPathFormat); 
+            Debug.LogFormat("ms_strPlatformABPath={0}", ms_strPlatformABPath); 
+            
+            var bUseLoaclRes = false;
+            #if UNITY_EDITOR
+                if (Config.ms_bUseLocalResInEditor) {
+                    bUseLoaclRes = true;
+                }
+            #endif
+            Debug.LogFormat("bUseLoaclRes={0}", bUseLoaclRes);
+            if (bUseLoaclRes) {
+                ms_bUpdateRes = false;
+                ms_strResLocalFullPath = Application.dataPath + "/";
+                ms_strABLocalFullPath = ms_strResLocalFullPath + ms_strPlatformABPath + "/";
+                ms_strLuaLocalFullPath = ms_strResLocalFullPath + "Lua";
+                ms_strToLuaLocalFullPath = ms_strResLocalFullPath + "Bsn/ThirdPart/tolua/Assets/ToLua/Lua";  
+            }
+            else {
+                ms_strResLocalFullPath = Application.persistentDataPath + "/" + Config.ms_strServerResLocalDirName + "/";
+                ms_strABLocalFullPath = ms_strResLocalFullPath + ms_strPlatformABPath + "/";
+                ms_strLuaLocalFullPath = ms_strResLocalFullPath + "Lua";
+                ms_strToLuaLocalFullPath = ms_strResLocalFullPath + "ToLua";  
+            }
+
+            Debug.LogFormat("ms_bUpdateRes={0}", ms_bUpdateRes);
+            Debug.LogFormat("Config.ms_bUseLocalResInEditor={0}", Config.ms_bUseLocalResInEditor); 
+            Debug.LogFormat("ms_strResLocalFullPath={0}", ms_strResLocalFullPath);
+            Debug.LogFormat("ms_strABLocalFullPath={0}", ms_strABLocalFullPath);
+            Debug.LogFormat("ms_strLuaLocalFullPath={0}", ms_strLuaLocalFullPath);
+            Debug.LogFormat("ms_strToLuaLocalFullPath={0}", ms_strToLuaLocalFullPath);
+
+            LuaConst.osDir = ms_strPlatformName;
+            LuaConst.luaDir = ms_strLuaLocalFullPath;
+            LuaConst.toluaDir = ms_strToLuaLocalFullPath;
+            LuaConst.luaResDir = ms_strLuaLocalFullPath;
             Debug.LogFormat("LuaConst.osDir={0}", LuaConst.osDir);
-
-#if UNITY_EDITOR
-            if (!Config.ms_bUseServerRes) {
-                ms_strResLocalPath = Application.dataPath + "/";
-                LuaConst.luaDir = ms_strResLocalPath + "Lua";
-                LuaConst.toluaDir = ms_strResLocalPath + "Bsn/ThirdPart/tolua/Assets/ToLua/Lua";  
-            }
-#else
-            Config.ms_bUseServerRes = true;
-#endif
-            if (Config.ms_bUseServerRes) {
-                Config.ms_strServerResUrl += LuaConst.osDir + "/";
-                ms_strResLocalPath = Application.persistentDataPath + "/" + Config.ms_strServerResLocalDirName + "/";
-                LuaConst.luaDir = ms_strResLocalPath + "Lua";
-                LuaConst.toluaDir = ms_strResLocalPath + "ToLua"; 
-            }
-
-            Debug.LogFormat("Config.ms_bUseServerRes={0}", Config.ms_bUseServerRes); 
-            Debug.LogFormat("Config.ms_strServerResUrl={0}", Config.ms_strServerResUrl);
-            Debug.LogFormat("Global.ms_strResLocalPath={0}", Global.ms_strResLocalPath); 
-            Debug.LogFormat("LuaConst.luaDir={0}", LuaConst.luaDir); 
-            Debug.LogFormat("LuaConst.toluaDir={0}", LuaConst.toluaDir); 
+            Debug.LogFormat("LuaConst.luaDir={0}", LuaConst.luaDir);
+            Debug.LogFormat("LuaConst.toluaDir={0}", LuaConst.toluaDir);
+            Debug.LogFormat("LuaConst.luaResDir={0}", LuaConst.luaResDir);
         }
 
-        public static string GetResLocalPath(string strFilePath) {
-            return Global.ms_strResLocalPath + strFilePath;
+        // strFilePath "Lua/Main.lua"
+        // return 
+        public static string GetResLocalFullPath(string strPathName) {
+            return ms_strResLocalFullPath + strPathName;
         }
 
         public static void Init(GameObject goMain, NBsn.Main Main) {
