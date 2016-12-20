@@ -5,6 +5,23 @@ vscode/sample/out
 vscode/sample/node_modules
 gopath/src/u3d_update/static/u3d
 
+u3d/[Ll]ibrary/
+u3d/[Tt]emp/
+u3d/[Oo]bj/
+u3d/[Bb]uild/
+u3d/[Bb]uilds/
+u3d/Assets/AssetStoreTools*
+u3d/Assets/Bsn/ThirdPart/tolua
+u3d/Out/*
+u3d/Assets/ABOut
+u3d/Assets/ABOut.meta
+
+gopath/src/github.com
+gopath/pkg
+gopath/bin
+gopath/src/sourcegraph.com
+gopath/src/golang.org
+
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o
 *.a
@@ -30,22 +47,7 @@ _testmain.go
 *.test
 *.prof
 
-gopath/src/github.com
-gopath/pkg
-gopath/bin
-gopath/src/sourcegraph.com
-gopath/src/golang.org
 *.exe~
-
-u3d/[Ll]ibrary/
-u3d/[Tt]emp/
-u3d/[Oo]bj/
-u3d/[Bb]uild/
-u3d/[Bb]uilds/
-u3d/Assets/AssetStoreTools*
-u3d/Assets/Bsn/ThirdPart/tolua
-u3d/Out/*
-u3d/AssertBundle
 
 *.assetbundle
 *.assetbundle.meta
