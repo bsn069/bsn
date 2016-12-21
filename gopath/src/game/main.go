@@ -10,8 +10,8 @@ import (
 
 func main() {
 	var vGate gate.SGlobal
-	vGate.Start()
-	defer vGate.Stop()
+	vGate.Run()
+	defer vGate.Cmd("stop")
 
 	r := bufio.NewReader(os.Stdin)
 	b, _, _ := r.ReadLine()

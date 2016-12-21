@@ -14,12 +14,6 @@ type SClientMgr struct {
 	m_u16ClientCountMax uint16
 }
 
-func (this *SClientMgr) init()  {
-	this.m_u16ClientCountMax = 100
-	this.M_chanWaitStopListen = make(chan bool, 1)
-	this.M_clients = make([]SClient, 0, this.m_u16ClientCountMax)
-}
-
 func (this *SClientMgr) addr() string {
 	return this.M_strListenAddr
 }
@@ -31,6 +25,36 @@ func (this *SClientMgr) listener() net.Listener {
 func (this *SClientMgr) setAddr(strAddr string) error {
 	this.M_strListenAddr = strAddr
 	return nil
+}
+
+func (this *SClientMgr) start()  {
+	this.m_u16ClientCountMax = 100
+	this.M_chanWaitStopListen = make(chan bool, 1)
+	this.M_clients = make([]SClient, 0, this.m_u16ClientCountMax)
+
+	for i := 0; i < len(this.M_clients); i++ {
+		var vClient = &this.M_clients[i]
+		vClient.setId(uint16(i) + 1)
+	}
+
+	this.setAddr(":50000")
+	this.startListen()
+}
+
+func (this *SClientMgr) stop()  {
+	fmt.Println("stop")	
+	this.stopListen()
+	this.stopAllClient()
+}
+
+func (this *SClientMgr) stopAllClient()  {
+	fmt.Println("stopAllClient")
+	for i := 0; i < len(this.M_clients); i++ {
+		var vClient = &this.M_clients[i]
+		if vClient.conn() != nil {
+			vClient.stop()
+		}
+	}
 }
 
 func (this *SClientMgr) startListen() error {
@@ -56,14 +80,14 @@ func (this *SClientMgr) stopListen()  {
 		return
 	}
 	this.listener().Close()
-	this.M_Listener = nil
 	<-this.M_chanWaitStopListen 
+	this.M_Listener = nil
 	fmt.Println("stopListen end")
 }
 
 func (this *SClientMgr) listenWorker()  {
 	listener := this.listener()
-	for listener != nil {
+	for {
 		vConn, err := listener.Accept()
 		if err != nil {
 			fmt.Println(err)
@@ -76,19 +100,14 @@ func (this *SClientMgr) listenWorker()  {
 }
 
 func (this *SClientMgr) onAccept(iConn net.Conn) {
-	var vClient *SClient
+	fmt.Println("onAccept", iConn)
 	for i := 0; i < len(this.M_clients); i++ {
-		vClient = &this.M_clients[i]
-		if vClient.Id() == 0 {
-			vClient.SetId(i+1)
-			vClient.SetConn(iConn)
-			break
+		var vClient = &this.M_clients[i]
+		if vClient.conn() == nil {
+			vClient.start(iConn)
+			return
 		}
 	}
-
-	if vClient.Id() != 0 { 
-		return
-	}	
 
 	// todo: gate 满了 重定向
 	iConn.Close()
