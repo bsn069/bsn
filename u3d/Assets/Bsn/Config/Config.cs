@@ -14,7 +14,7 @@ namespace NBsn {
         public static int   ms_nFPS      = 30;  
 
         // 编辑器模式下使用本地资源 
-        public static bool      ms_bUseLocalResInEditor = true;
+        public static bool      ms_bUseLocalResInEditor = false;
 
         // 服务器资源根目录http://172.18.100.47:10000/static/u3d/
         public static string    ms_strServerResUrl = "http://172.18.100.47:10000/static/u3d/";

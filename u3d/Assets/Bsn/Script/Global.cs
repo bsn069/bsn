@@ -196,10 +196,15 @@ namespace NBsn {
 
         #region
         public static WWW NewServerResWWW(string pathName) {
-            string strUrl = Config.ms_strServerResUrl + pathName;
+            string strUrl = Config.ms_strServerResUrl + ms_strPlatformName + "/" + pathName;
             Debug.LogFormat("NBsn.Global NewServerResWWW strUrl={0}", strUrl); 
             return new WWW(strUrl);
         }
         #endregion
+
+        public static Transform GetUI(string strUIName) {
+            var tfUI = ms_Main.transform.FindChild("UI");
+            return tfUI.FindChild(strUIName);
+        } 
     }
 }

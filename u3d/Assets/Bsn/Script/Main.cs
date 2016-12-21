@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 namespace NBsn {
@@ -26,5 +27,12 @@ namespace NBsn {
             NBsn.Global.Uninit();
         }
 
+        public void SetProgress(float fValue) {
+
+        }
+
+        public void SetText(string strText) {
+
+        }
     }
 }

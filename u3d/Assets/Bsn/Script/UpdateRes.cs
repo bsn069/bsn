@@ -42,11 +42,17 @@ namespace NBsn {
         private IEnumerator CoroutineUpdateDownload() {
             Debug.Log("CoroutineUpdateDownload()");
 
+            var tfUIUpdate = Global.GetUI("UIUpdate");
+            var oUIUpdate = tfUIUpdate.GetComponent<UIUpdate>();
+
             WWW www = null;
             string strLocalPath = null;
             FileStream fs = null;
             string strDir = null;
+            float fStepValue = 1.0f / m_strNeedDownloadFilePath.Count;
+            float fValue = fStepValue;
             foreach (var strFilePath in m_strNeedDownloadFilePath) {
+                oUIUpdate.SetText(strFilePath);
                 www = Global.NewServerResWWW(strFilePath);
                 while (!www.isDone) { 
                     yield return null; 
@@ -72,7 +78,12 @@ namespace NBsn {
                 fs.Write(www.bytes, 0, www.bytes.Length);
                 fs.Flush();
                 fs.Dispose();
+                yield return new WaitForSeconds(1);
+
+                fValue += fStepValue;
+                oUIUpdate.SetProgress(fValue);
             }
+            oUIUpdate.gameObject.SetActive(false);
         }
         
         private IEnumerator CoroutineUpdateGetFileList() {
