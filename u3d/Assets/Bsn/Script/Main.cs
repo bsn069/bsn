@@ -17,22 +17,9 @@ namespace NBsn {
             NBsn.Global.Init(gameObject, this);
         }
 
-        void OnApplicationQuit() {
-            Debug.LogFormat("NBsn.Main OnApplicationQuit"); 
-            NBsn.Global.OnApplicationQuit();
-        }
-
         void OnDestroy() {
             Debug.LogFormat("NBsn.Main OnDestroy"); 
             NBsn.Global.Uninit();
-        }
-
-        public void SetProgress(float fValue) {
-
-        }
-
-        public void SetText(string strText) {
-
         }
     }
 }

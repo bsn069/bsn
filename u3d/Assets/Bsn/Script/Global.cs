@@ -12,6 +12,8 @@ namespace NBsn {
         public static GameObject        ms_goMain    = null;
         public static NBsn.Main         ms_Main      = null;
         public static NBsn.LuaLooper    ms_luaLooper = null;
+        public static NBsn.UIMgr        ms_UIMgr = new NBsn.UIMgr();
+        public static NBsn.CUpdateRes   ms_CUpdateRes = null;
         
         // 平台名
         public static string    ms_strPlatformName = null;
@@ -27,6 +29,24 @@ namespace NBsn {
 
         public static bool      ms_bUpdateRes = true;
 
+
+        #region coroutine
+        public static Coroutine StartCoroutine(IEnumerator iEnumerator) {
+            if (Global.ms_Main == null) {
+                Debug.LogErrorFormat("NBsn.Global.ms_Main == null"); 
+                return null;
+            }
+            return Global.ms_Main.StartCoroutine(iEnumerator);
+        }
+
+        public static void StopCoroutine(Coroutine coroutine) {
+            if (Global.ms_Main == null) {
+                Debug.LogErrorFormat("NBsn.Global.ms_Main == null"); 
+                return;
+            }
+            Global.ms_Main.StopCoroutine(coroutine);
+        }
+        #endregion
 
         #region init
         public static void InitConfig(string strPlatformName) {
@@ -85,52 +105,29 @@ namespace NBsn {
             Debug.LogFormat("LuaConst.luaResDir={0}", LuaConst.luaResDir);
         }
 
-        // strFilePath "Lua/Main.lua"
-        // return 
-        public static string GetResLocalFullPath(string strPathName) {
-            return ms_strResLocalFullPath + strPathName;
-        }
-
         public static void Init(GameObject goMain, NBsn.Main Main) {
             Debug.LogFormat("NBsn.Global Init goMain={0}", goMain); 
+            
             Global.ms_goMain    = goMain;
             Global.ms_Main      = Main;
+            Global.ms_UIMgr.Init(goMain.transform.FindChild("UI"));
 
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
             Application.targetFrameRate = Config.ms_nFPS;
 
-            Global.UpdateRes();
+            Global.ms_CUpdateRes = new NBsn.CUpdateRes();
+            Global.ms_CUpdateRes.Start();
         }
 
         public static void Uninit() {
             Debug.Log("NBsn.Global Uninit"); 
  
-            Global.ms_goMain    = null;
+            Global.ms_CUpdateRes = null;
+            Global.ms_UIMgr.Uninit();
             Global.ms_Main      = null;
+            Global.ms_goMain    = null;
 
             Global.UninitLua();
-        }
-        #endregion
-
-        public static void OnApplicationQuit() {
-            Debug.Log("NBsn.Global OnApplicationQuit"); 
-        }
-
-        #region
-        public static void UpdateRes() {
-            Debug.Log("NBsn.Global UpdateRes"); 
-            var updateRes = new CUpdateRes();
-            updateRes.Start();
-        }
-
-        public static void UpdateResSuccess() {
-            Debug.Log("NBsn.Global UpdateResSuccess"); 
-            Global.InitLua();
-        }
-
-        public static void UpdateResFail() {
-            Debug.Log("NBsn.Global UpdateResFail"); 
-            Application.Quit();
         }
         #endregion
 
@@ -176,7 +173,6 @@ namespace NBsn {
         public static void UninitLua() {
             Debug.Log("NBsn.Global UninitLua"); 
             if (Global.ms_luaLooper != null) {
-                Global.ms_luaLooper.Dispose();
                 Global.ms_luaLooper = null;
             }
  
@@ -185,26 +181,6 @@ namespace NBsn {
                 Global.ms_luaState = null;  
             }
         }
-
-        public static void ThrowException() {
-            Debug.Log("NBsn.Global ThrowException"); 
-            string error = ms_luaState.LuaToString(-1);
-            Global.ms_luaState.LuaPop(2);                
-            throw new LuaException(error, LuaException.GetLastError());
-        }
         #endregion
-
-        #region
-        public static WWW NewServerResWWW(string pathName) {
-            string strUrl = Config.ms_strServerResUrl + ms_strPlatformName + "/" + pathName;
-            Debug.LogFormat("NBsn.Global NewServerResWWW strUrl={0}", strUrl); 
-            return new WWW(strUrl);
-        }
-        #endregion
-
-        public static Transform GetUI(string strUIName) {
-            var tfUI = ms_Main.transform.FindChild("UI");
-            return tfUI.FindChild(strUIName);
-        } 
     }
 }

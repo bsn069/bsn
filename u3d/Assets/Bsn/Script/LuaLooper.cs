@@ -25,75 +25,83 @@ using LuaInterface;
 
 namespace NBsn {
     [Reg2LuaAttribute]
-    public class LuaLooper : MonoBehaviour {    
-        public void Dispose() {
-            Debug.Log("NBsn.LuaLooper Dispose"); 
+    public class LuaLooper : MonoBehaviour { 
+        public static void ThrowException() {
+            Debug.Log("NBsn.Global ThrowException"); 
+
+            var luaState = NBsn.Global.ms_luaState;
+            if (luaState == null) {
+                return;
+            }
+            
+            string error = luaState.LuaToString(-1);
+            luaState.LuaPop(2);                
+            throw new LuaException(error, LuaException.GetLastError());
         }
 
         void Update() {
+            var luaState = NBsn.Global.ms_luaState;
+            if (luaState == null) {
 #if UNITY_EDITOR
-            if (NBsn.Global.ms_luaState == null) {
-                Debug.LogError("NBsn.LuaLooper Update m_luaState == null"); 
+                Debug.LogError("NBsn.LuaLooper Update luaState == null"); 
+#endif
                 return;
             }
-#endif
-            if (NBsn.Global.ms_luaState.LuaUpdate(Time.deltaTime, Time.unscaledDeltaTime) != 0) {
-                NBsn.Global.ThrowException();
+
+            if (luaState.LuaUpdate(Time.deltaTime, Time.unscaledDeltaTime) != 0) {
+                ThrowException();
             }
 
-            NBsn.Global.ms_luaState.LuaPop(1);
-            NBsn.Global.ms_luaState.Collect();
+            luaState.LuaPop(1);
+            luaState.Collect();
 #if UNITY_EDITOR
-            if (!NBsn.Global.ms_luaState.CheckTop()) {
-                Debug.LogError("NBsn.LuaLooper Update !m_luaState.CheckTop()"); 
+            if (!luaState.CheckTop()) {
+                Debug.LogError("NBsn.LuaLooper Update !luaState.CheckTop()"); 
                 return;
             }
 #endif
         }
 
         void LateUpdate() {
+            var luaState = NBsn.Global.ms_luaState;
+            if (luaState == null) {
 #if UNITY_EDITOR
-            if (NBsn.Global.ms_luaState == null) {
-                Debug.LogError("NBsn.LuaLooper LateUpdate m_luaState == null"); 
+                Debug.LogError("NBsn.LuaLooper LateUpdate luaState == null"); 
+#endif
                 return;
             }
-#endif
-            if (NBsn.Global.ms_luaState.LuaLateUpdate() != 0) {
-                NBsn.Global.ThrowException();
+            if (luaState.LuaLateUpdate() != 0) {
+                ThrowException();
             }
 
-            NBsn.Global.ms_luaState.LuaPop(1);
+            luaState.LuaPop(1);
 #if UNITY_EDITOR
-            if (!NBsn.Global.ms_luaState.CheckTop()) {
-                Debug.LogError("NBsn.LuaLooper LateUpdate !m_luaState.CheckTop()"); 
+            if (!luaState.CheckTop()) {
+                Debug.LogError("NBsn.LuaLooper LateUpdate !luaState.CheckTop()"); 
                 return;
             }
 #endif
         }
 
         void FixedUpdate() {
+            var luaState = NBsn.Global.ms_luaState;
+            if (luaState == null) {
 #if UNITY_EDITOR
-            if (NBsn.Global.ms_luaState == null) {
-                Debug.LogError("NBsn.LuaLooper FixedUpdate m_luaState == null"); 
+                Debug.LogError("NBsn.LuaLooper FixedUpdate luaState == null"); 
+#endif
+                return;
+            }
+            if (luaState.LuaFixedUpdate(Time.fixedDeltaTime) != 0) {
+                ThrowException();
+            }
+
+            luaState.LuaPop(1);
+#if UNITY_EDITOR
+            if (!luaState.CheckTop()) {
+                Debug.LogError("NBsn.LuaLooper FixedUpdate !luaState.CheckTop()"); 
                 return;
             }
 #endif
-            if (NBsn.Global.ms_luaState.LuaFixedUpdate(Time.fixedDeltaTime) != 0) {
-                NBsn.Global.ThrowException();
-            }
-
-            NBsn.Global.ms_luaState.LuaPop(1);
-#if UNITY_EDITOR
-            if (!NBsn.Global.ms_luaState.CheckTop()) {
-                Debug.LogError("NBsn.LuaLooper FixedUpdate !m_luaState.CheckTop()"); 
-                return;
-            }
-#endif
-        }
-
-        void OnDestroy() {
-            Debug.Log("NBsn.LuaLooper OnDestroy"); 
-            Dispose();
         }
     }
 }

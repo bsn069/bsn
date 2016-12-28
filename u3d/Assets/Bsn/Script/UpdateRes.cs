@@ -14,82 +14,107 @@ namespace NBsn {
         private List<string> m_strNeedDownloadFilePath = null;
 
         public void Start() {
-            Global.ms_Main.StartCoroutine(CoroutineUpdate());
+            Global.StartCoroutine(CoroutineUpdate());
+        }
+
+        #region update result
+        private void UpdateResSuccess() {
+            Debug.Log("NBsn.CUpdateRes UpdateResSuccess"); 
+            Global.InitLua();
+        }
+
+        private void UpdateResFail() {
+            Debug.Log("NBsn.CUpdateRes UpdateResFail"); 
+            Application.Quit();
+        }
+        #endregion
+
+        private static WWW NewServerResWWW(string pathName) {
+            string strUrl = Config.ms_strServerResUrl + NBsn.Global.ms_strPlatformName + "/" + pathName;
+            Debug.LogFormat("NBsn.Global NewServerResWWW strUrl={0}", strUrl); 
+            return new WWW(strUrl);
+        }
+
+        // strFilePath "Lua/Main.lua"
+        // return 
+        private static string GetResLocalFullPath(string strPathName) {
+            return NBsn.Global.ms_strResLocalFullPath + strPathName;
         }
 
         private IEnumerator CoroutineUpdate() {
             Debug.Log("CoroutineUpdate()");
-            if (!Global.ms_bUpdateRes) {
+            if (!Global.ms_bUpdateRes) { // 不更新资源
                 goto Exit0;
             }
 
-            yield return Global.ms_Main.StartCoroutine(CoroutineUpdateGetFileList());
+            yield return Global.StartCoroutine(CoroutineUpdateGetFileList());
             if (m_strError != null) goto Exit0;  
 
-            yield return Global.ms_Main.StartCoroutine(CoroutineUpdateDownload());
-            if (m_strError != null) goto Exit0;  
+            // yield return Global.StartCoroutine(CoroutineUpdateDownload());
+            // if (m_strError != null) goto Exit0;  
 
         Exit0:
             if (m_strError != null) {
                 Debug.LogError(m_strError);
-                Global.UpdateResFail();
+                UpdateResFail();
             }
             else {
-                Global.UpdateResSuccess();
+                UpdateResSuccess();
             }
+            Global.ms_CUpdateRes = null;
         }
 
-        private IEnumerator CoroutineUpdateDownload() {
-            Debug.Log("CoroutineUpdateDownload()");
+        // private IEnumerator CoroutineUpdateDownload() {
+        //     Debug.Log("CoroutineUpdateDownload()");
 
-            var tfUIUpdate = Global.GetUI("UIUpdate");
-            var oUIUpdate = tfUIUpdate.GetComponent<UIUpdate>();
+        //     var tfUIUpdate = Global.ms_UIMgr.GetUI("UIUpdate");
+        //     var oUIUpdate = tfUIUpdate.GetComponent<UIUpdate>();
 
-            WWW www = null;
-            string strLocalPath = null;
-            FileStream fs = null;
-            string strDir = null;
-            float fStepValue = 1.0f / m_strNeedDownloadFilePath.Count;
-            float fValue = fStepValue;
-            foreach (var strFilePath in m_strNeedDownloadFilePath) {
-                oUIUpdate.SetText(strFilePath);
-                www = Global.NewServerResWWW(strFilePath);
-                while (!www.isDone) { 
-                    yield return null; 
-                }
-                if (www.error != null) {
-                    m_strError = "";
-                    Debug.LogErrorFormat("www.error={0}", www.error);
-                    yield break;
-                }
+        //     WWW www = null;
+        //     string strLocalPath = null;
+        //     FileStream fs = null;
+        //     string strDir = null;
+        //     float fStepValue = 1.0f / m_strNeedDownloadFilePath.Count;
+        //     float fValue = fStepValue;
+        //     foreach (var strFilePath in m_strNeedDownloadFilePath) {
+        //         oUIUpdate.SetText(strFilePath);
+        //         www = NewServerResWWW(strFilePath);
+        //         while (!www.isDone) { 
+        //             yield return null; 
+        //         }
+        //         if (www.error != null) {
+        //             m_strError = "";
+        //             Debug.LogErrorFormat("www.error={0}", www.error);
+        //             yield break;
+        //         }
 
-                strLocalPath = Global.GetResLocalFullPath(strFilePath);
-                Debug.LogFormat("strLocalPath={0}", strLocalPath);
+        //         strLocalPath = GetResLocalFullPath(strFilePath);
+        //         Debug.LogFormat("strLocalPath={0}", strLocalPath);
 
-                if (File.Exists(strLocalPath)) {
-                    fs = new FileStream(strLocalPath, FileMode.Truncate, FileAccess.Write, FileShare.ReadWrite);
-                } else {
-                    strDir = Path.GetDirectoryName(strLocalPath);
-                    if (!Directory.Exists(strDir)) {
-                        Directory.CreateDirectory(strDir);
-                    }
-                    fs = new FileStream(strLocalPath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-                }
-                fs.Write(www.bytes, 0, www.bytes.Length);
-                fs.Flush();
-                fs.Dispose();
-                yield return new WaitForSeconds(1);
+        //         if (File.Exists(strLocalPath)) {
+        //             fs = new FileStream(strLocalPath, FileMode.Truncate, FileAccess.Write, FileShare.ReadWrite);
+        //         } else {
+        //             strDir = Path.GetDirectoryName(strLocalPath);
+        //             if (!Directory.Exists(strDir)) {
+        //                 Directory.CreateDirectory(strDir);
+        //             }
+        //             fs = new FileStream(strLocalPath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        //         }
+        //         fs.Write(www.bytes, 0, www.bytes.Length);
+        //         fs.Flush();
+        //         fs.Dispose();
+        //         yield return new WaitForSeconds(1);
 
-                fValue += fStepValue;
-                oUIUpdate.SetProgress(fValue);
-            }
-            oUIUpdate.gameObject.SetActive(false);
-        }
+        //         fValue += fStepValue;
+        //         oUIUpdate.SetProgress(fValue);
+        //     }
+        //     oUIUpdate.gameObject.SetActive(false);
+        // }
         
         private IEnumerator CoroutineUpdateGetFileList() {
             Debug.Log("CoroutineUpdateGetFileList()");
 
-            var www = Global.NewServerResWWW("FileList.txt");
+            var www = NewServerResWWW("FileList.txt");
             while (!www.isDone) { 
                 yield return null; 
             }

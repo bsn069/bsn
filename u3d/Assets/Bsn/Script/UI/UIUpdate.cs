@@ -10,14 +10,14 @@ namespace NBsn {
         private Text m_text = null;
 
         void Awake() {
-            Debug.LogFormat("NBsn.CUIUpdate Awake"); 
+            Debug.LogFormat("NBsn.UIUpdate Awake"); 
             var tfSlider = transform.FindChild("Slider");
             m_slider = tfSlider.GetComponent<Slider>();
             m_text = tfSlider.FindChild("Text").GetComponent<Text>();
         }
 
         void Start() {
-            Debug.LogFormat("NBsn.CUIUpdate Start"); 
+            Debug.LogFormat("NBsn.UIUpdate Start"); 
         }
 
         public void SetProgress(float fValue) {
