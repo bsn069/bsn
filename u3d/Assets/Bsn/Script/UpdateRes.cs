@@ -43,7 +43,7 @@ namespace NBsn {
 
         private IEnumerator CoroutineUpdate() {
             Debug.Log("CoroutineUpdate()");
-            if (!Global.ms_bUpdateRes) { // 不更新资源
+            if (Config.ms_eResLoadType != NBsn.EResLoadType.AppAB) { // 不更新资源
                 goto Exit0;
             }
 

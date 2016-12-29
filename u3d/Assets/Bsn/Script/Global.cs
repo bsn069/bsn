@@ -14,6 +14,7 @@ namespace NBsn {
         public static NBsn.LuaLooper    ms_luaLooper = null;
         public static NBsn.UIMgr        ms_UIMgr = new NBsn.UIMgr();
         public static NBsn.CUpdateRes   ms_CUpdateRes = null;
+        public static NBsn.CResMgr      ms_CResMgr = new NBsn.CResMgr();
         
         // 平台名
         public static string    ms_strPlatformName = null;
@@ -26,8 +27,6 @@ namespace NBsn {
 
         public static string    ms_strLuaLocalFullPath = null;
         public static string    ms_strToLuaLocalFullPath = null;
-
-        public static bool      ms_bUpdateRes = true;
 
 
         #region coroutine
@@ -67,15 +66,12 @@ namespace NBsn {
             Debug.LogFormat("NBsn.Config.ms_strPlatformABPathFormat={0}", NBsn.Config.ms_strPlatformABPathFormat); 
             Debug.LogFormat("ms_strPlatformABPath={0}", ms_strPlatformABPath); 
             
-            var bUseLoaclRes = false;
-            #if UNITY_EDITOR
-                if (Config.ms_bUseLocalResInEditor) {
-                    bUseLoaclRes = true;
-                }
-            #endif
-            Debug.LogFormat("bUseLoaclRes={0}", bUseLoaclRes);
-            if (bUseLoaclRes) {
-                ms_bUpdateRes = false;
+#if !UNITY_EDITOR
+            Config.ms_eResLoadType = NBsn.EResLoadType.AppAB;
+#endif
+            Debug.LogFormat("Config.ms_eResLoadType={0}", Config.ms_eResLoadType);
+
+            if (Config.ms_eResLoadType != NBsn.EResLoadType.AppAB) {
                 ms_strResLocalFullPath = Application.dataPath + "/";
                 ms_strABLocalFullPath = ms_strResLocalFullPath + ms_strPlatformABPath + "/";
                 ms_strLuaLocalFullPath = ms_strResLocalFullPath + "Lua";
@@ -88,8 +84,6 @@ namespace NBsn {
                 ms_strToLuaLocalFullPath = ms_strResLocalFullPath + "ToLua";  
             }
 
-            Debug.LogFormat("ms_bUpdateRes={0}", ms_bUpdateRes);
-            Debug.LogFormat("Config.ms_bUseLocalResInEditor={0}", Config.ms_bUseLocalResInEditor); 
             Debug.LogFormat("ms_strResLocalFullPath={0}", ms_strResLocalFullPath);
             Debug.LogFormat("ms_strABLocalFullPath={0}", ms_strABLocalFullPath);
             Debug.LogFormat("ms_strLuaLocalFullPath={0}", ms_strLuaLocalFullPath);
@@ -115,6 +109,7 @@ namespace NBsn {
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
             Application.targetFrameRate = Config.ms_nFPS;
 
+            ms_UIMgr.NewUI("UIUpdate");
             Global.ms_CUpdateRes = new NBsn.CUpdateRes();
             Global.ms_CUpdateRes.Start();
         }

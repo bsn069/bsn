@@ -49,7 +49,7 @@ namespace NBsnEditor {
                         return false;
                     }
             }
-            string outPathName = string.Format("{0}/{1}{2}", outDir, NBsn.Config.ms_appName, extName);
+            string outPathName = string.Format("{0}/{1}{2}", outDir, "bsn", extName);
             Debug.LogFormat("outPathName={0}", outPathName);
 
             EditorUserBuildSettings.SwitchActiveBuildTarget(buildTarget);
