@@ -110,6 +110,7 @@ namespace NBsn {
             Application.targetFrameRate = Config.ms_nFPS;
 
             ms_UIMgr.NewUI("UIUpdate");
+            ms_UIMgr.NewUI("UIUpdate2");
             Global.ms_CUpdateRes = new NBsn.CUpdateRes();
             Global.ms_CUpdateRes.Start();
         }

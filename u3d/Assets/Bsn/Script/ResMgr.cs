@@ -31,6 +31,10 @@ namespace NBsn {
                 }
                 break;
             }
+            if (ret == null) {
+                Debug.LogErrorFormat("LoadRes({0}) fail", strPath);
+                return null;
+            }
 
             ret = (GameObject)UnityEngine.Object.Instantiate(ret);
             ret.name = ret.name.Replace("(Clone)", "");
