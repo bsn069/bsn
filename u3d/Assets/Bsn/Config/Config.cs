@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace NBsn {
     [Reg2LuaAttribute]
     public static class Config {
-        public static NBsn.EResLoadType  ms_eResLoadType = NBsn.EResLoadType.EditorABRes;
+        public static NBsn.EResLoadType  ms_eResLoadType = NBsn.EResLoadType.EditorABOut;
         public static int   ms_nFPS      = 30;  
 
 

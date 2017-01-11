@@ -31,7 +31,8 @@ namespace NBsn {
                 Debug.LogErrorFormat("LoadRes fail! strUIPath={0}", strUIPath);
                 return null;
             }
-            goUIPrefeb.transform.parent = m_tfRoot;
+
+            goUIPrefeb.transform.SetParent(m_tfRoot);
             var rectTransform = goUIPrefeb.GetComponent<RectTransform>();
             rectTransform.localPosition = Vector3.zero;
             rectTransform.sizeDelta = Vector2.zero;

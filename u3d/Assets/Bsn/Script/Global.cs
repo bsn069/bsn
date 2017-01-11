@@ -97,6 +97,7 @@ namespace NBsn {
             Debug.LogFormat("LuaConst.luaDir={0}", LuaConst.luaDir);
             Debug.LogFormat("LuaConst.toluaDir={0}", LuaConst.toluaDir);
             Debug.LogFormat("LuaConst.luaResDir={0}", LuaConst.luaResDir);
+            ms_CResMgr.InitConfig();
         }
 
         public static void Init(GameObject goMain, NBsn.Main Main) {
@@ -105,7 +106,8 @@ namespace NBsn {
             Global.ms_goMain    = goMain;
             Global.ms_Main      = Main;
             Global.ms_UIMgr.Init(goMain.transform.FindChild("UI"));
-
+            Global.ms_CResMgr.Init();
+            
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
             Application.targetFrameRate = Config.ms_nFPS;
 
