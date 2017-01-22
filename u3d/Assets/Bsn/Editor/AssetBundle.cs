@@ -6,18 +6,19 @@ using System.IO;
 namespace NBsnEditor {
     public static class AssetBuddleBuilder  {
         public static string GetOutFullPath(BuildTarget buildTarget) {
-            Debug.LogFormat("NBsnEditor.AssetBuddleBuilder.GetOutFullPath({0})", buildTarget);
+            //Debug.LogFormat("NBsnEditor.AssetBuddleBuilder.GetOutFullPath({0})", buildTarget);
             
-            string strPlatform = NBsnEditor.CConfig.GetPlatformName(buildTarget);
-            NBsn.Global.InitConfig(strPlatform);
+            //string strPlatform = NBsnEditor.CConfig.GetPlatformName(buildTarget);
+            //NBsn.Global.InitConfig(strPlatform);
             
-            var strOutFullPath = string.Format("{0}/{1}"
-                , Application.dataPath
-                ,NBsn.Global.ms_strPlatformABPath
-            );
-            Debug.LogFormat("strOutFullPath={0}", strOutFullPath);
-            Directory.CreateDirectory(strOutFullPath);
-            return strOutFullPath;
+            //var strOutFullPath = string.Format("{0}/{1}"
+            //    , Application.dataPath
+            //    ,NBsn.Global.ms_strPlatformABPath
+            //);
+            //Debug.LogFormat("strOutFullPath={0}", strOutFullPath);
+            //Directory.CreateDirectory(strOutFullPath);
+            //return strOutFullPath;
+            return null;
         }
 
         // strABResDir "ABRes"

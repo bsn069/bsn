@@ -28,15 +28,5 @@ namespace NBsn {
         //unity 有些类作为sealed class, 其实完全等价于静态类
         public static List<Type> m_reg2LuaStaticType = new List<Type>{
         };
-
-        public static string GetPlatformName() {
-            #if UNITY_STANDALONE
-                return "Win";
-            #elif UNITY_ANDROID
-                return "Android";            
-            #else
-                return null;        
-            #endif
-        }
     }
 }
