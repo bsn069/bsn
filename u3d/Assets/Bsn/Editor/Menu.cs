@@ -153,12 +153,12 @@ namespace NBsnEditor {
             var staticClassTypes_back = CustomSettings.staticClassTypes;
             var staticClassTypes_new = new List<Type>();
             staticClassTypes_new.AddRange(staticClassTypes_back);
-            staticClassTypes_new.AddRange(NBsn.Config.m_reg2LuaStaticType);
+            // staticClassTypes_new.AddRange(NBsn.Config.m_reg2LuaStaticType);
 
             HashSet<Type> set = new HashSet<Type>();
             var customTypeList_back = CustomSettings.customTypeList;
             List<Type> reg2LuaType = new List<Type>();
-            reg2LuaType.AddRange(NBsn.Config.m_reg2LuaType);
+            // reg2LuaType.AddRange(NBsn.Config.m_reg2LuaType);
             GetUnityEngine(ref reg2LuaType);
             GetCustom(ref reg2LuaType);
             GetUGUI(ref reg2LuaType);

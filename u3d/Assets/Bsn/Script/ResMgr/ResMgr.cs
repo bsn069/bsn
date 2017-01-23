@@ -9,8 +9,20 @@ using UnityEditor;
 
 namespace NBsn {
 
-    [Reg2LuaAttribute]
+    // [Reg2LuaAttribute]
     public class CResMgr {
+        protected CResources m_Resources = new CResources();
+
+        public GameObject Load(string strPath) {
+            var go = m_Resources.Load(strPath);
+
+            if (go != null) {
+                go = (GameObject)UnityEngine.Object.Instantiate(go);
+                go.name = go.name.Replace("(Clone)", "");
+            }
+            return go;
+        }
+
         //private string m_strResRootDir = null;
         //private Dictionary<string, AssetBundle> m_abCache = new Dictionary<string, AssetBundle>();
         //private AssetBundleManifest m_abManifest = null;

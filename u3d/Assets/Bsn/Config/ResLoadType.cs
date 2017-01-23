@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace NBsn {
     // 资源加载类型
-    [Reg2LuaAttribute]
+    // [Reg2LuaAttribute]
     public enum EResLoadType {
         // 编辑器模式的 资源(非AB)存放目录
         EditorABRes = 1,

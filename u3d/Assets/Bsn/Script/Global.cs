@@ -5,12 +5,10 @@ using System.Runtime.InteropServices;
 using System;
 
 namespace NBsn {
-    [Reg2LuaAttribute]
+    // [Reg2LuaAttribute]
     public class CGlobal : IDisposable {
         public static NBsn.CGlobal Instance {
-            get {
-                return m_instance;
-            }
+            get { return m_instance; }
         }
 
         public NBsn.CLog Log {
@@ -29,6 +27,14 @@ namespace NBsn {
             get { return m_PathConfig; }
         }
 
+        public NBsn.CResMgr ResMgr {
+            get { return m_ResMgr; }
+        }
+
+        public NBsn.CUIMgr UIMgr {
+            get { return m_UIMgr; }
+        }
+
         #region
         public CGlobal() {
             m_instance = this;
@@ -38,6 +44,8 @@ namespace NBsn {
         protected NBsn.CLog m_Log = new NBsn.CLog();
         protected NBsn.CPathConfig m_PathConfig = new NBsn.CPathConfig();
         protected NBsn.NToLua.CConfig m_ToLuaConfig = new NBsn.NToLua.CConfig();
+        protected NBsn.CResMgr m_ResMgr = new NBsn.CResMgr();
+        protected NBsn.CUIMgr m_UIMgr = new NBsn.CUIMgr();
 
         protected string    m_strPlatformName = null;
 
@@ -57,6 +65,20 @@ namespace NBsn {
           
             PathConfig.Init();
             ToLuaConfig.Init();
+        }
+
+        // 游戏逻辑初始化
+        public void GameInit(GameObject goBsn) {
+            Log.Info("NBsn.CGlobal.GameInit()"); 
+            UIMgr.Init(goBsn.transform.FindChild("UI"));
+            UIMgr.GetUI("UIBsnUpdate");
+        }
+
+        public void GameUnInit() {
+            Log.Info("NBsn.CGlobal.GameUnInit()"); 
+
+            UIMgr.UnInit();
+            m_UIMgr = null;
         }
 
         public void Dispose() {

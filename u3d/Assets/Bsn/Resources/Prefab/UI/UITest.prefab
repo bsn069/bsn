@@ -268,9 +268,8 @@ GameObject:
   m_Component:
   - 224: {fileID: 22430148}
   - 222: {fileID: 22232492}
-  - 114: {fileID: 11422608}
   m_Layer: 5
-  m_Name: UIUpdate
+  m_Name: UITest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,17 +362,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11422608
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 198896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7588ad084f2e07469487cf1a1f81e64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11428470
 MonoBehaviour:
   m_ObjectHideFlags: 1
