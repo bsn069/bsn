@@ -9,7 +9,7 @@ namespace NBsn {
             DontDestroyOnLoad(gameObject);  //防止销毁自己
             new NBsn.CGlobal();
             NBsn.CGlobal.Instance.Log.InfoFormat("NBsn.MMain.Awake()"); 
-            NBsn.CGlobal.Instance.InitConfig(NBsn.CPlatform.Name());
+            NBsn.CGlobal.Instance.ConfigInit(NBsn.CPlatform.Name());
         }
 
         void Start() {
@@ -18,6 +18,7 @@ namespace NBsn {
 
         void OnDestroy() {
             NBsn.CGlobal.Instance.Log.InfoFormat("NBsn.MMain.OnDestroy()"); 
+            NBsn.CGlobal.Instance.Dispose();
         }
     }
 }
