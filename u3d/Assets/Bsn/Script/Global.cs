@@ -8,7 +8,14 @@ namespace NBsn {
     // [Reg2LuaAttribute]
     public class CGlobal : IDisposable {
         public static NBsn.CGlobal Instance {
-            get { return m_instance; }
+            get { 
+                #if UNITY_EDITOR
+                if (m_instance == null) {
+                    new CGlobal();
+                }
+                #endif
+                return m_instance; 
+            }
         }
 
         public NBsn.CLog Log {

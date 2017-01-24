@@ -30,13 +30,13 @@ namespace NBsnEditor {
 			}
         }
 
-        #region AssertBundle one
-        [MenuItem("Bsn/Test2", false, 2)]
-        public static void Bsn_ABSetName() {
-            Debug.Log("NBsnEditor.Menu.Bsn_ABSetName()");
-            AssetBuddleBuilder.U5AB(BuildTarget.StandaloneWindows);
-        }
-        #endregion
+        // #region AssertBundle one
+        // [MenuItem("Bsn/Test2", false, 2)]
+        // public static void Bsn_ABSetName() {
+        //     Debug.Log("NBsnEditor.Menu.Bsn_ABSetName()");
+        //     AssetBuddleBuilder.U5AB(BuildTarget.StandaloneWindows);
+        // }
+        // #endregion
 
         // #region AssertBundle one
         // [MenuItem("Bsn/AssertBundleScene/Win32", false, 1)]

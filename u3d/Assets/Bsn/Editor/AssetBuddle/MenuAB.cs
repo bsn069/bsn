@@ -15,27 +15,26 @@ using Debugger = LuaInterface.Debugger;
 using BindType = ToLuaMenu.BindType;
 
 namespace NBsnEditor {
-    public static class MenuAB {
-        [MenuItem("Bsn/AB/1SetAssetName", false, 1)]
-        public static void SetAssetName() {
-            Debug.Log("NBsnEditor.MenuAB.SetAssetName()");
+    public static class CMenuAB {
+        [MenuItem("Bsn/AB/1SetABName", false, 1)]
+        public static void SetABName() {
+            NBsn.CGlobal.Instance.Log.InfoFormat("NBsn.CMenuAB.SetABName()"); 
+            NBsn.CGlobal.Instance.ConfigInit(NBsn.CPlatform.Name());
 		    AssetDatabase.Refresh();
-            AssetBuddleBuilder.SetAssertName("ABRes", ".ab");
+            NBsnEditor.CAssetBuddleBuilder.SetABName("ABRes", ".ab");
         } 
 
         #region MakeAB
         [MenuItem("Bsn/AB/2MakeAB/Win", false, 2)]
         public static void MakeABWin() {
-            Debug.Log("NBsnEditor.MenuAB.MakeABWin()");
-		    AssetDatabase.Refresh();
-            AssetBuddleBuilder.U5AB(BuildTarget.StandaloneWindows);
+            NBsn.CGlobal.Instance.Log.InfoFormat("NBsn.CMenuAB.MakeABWin()"); 
+            NBsnEditor.CAssetBuddleBuilder.MakeAB(BuildTarget.StandaloneWindows);
         } 
 
         [MenuItem("Bsn/AB/2MakeAB/Android", false, 3)]
         public static void MakeABAndroid() {
-            Debug.Log("NBsnEditor.MenuAB.MakeABAndroid()");
-		    AssetDatabase.Refresh();
-            AssetBuddleBuilder.U5AB(BuildTarget.Android);
+            NBsn.CGlobal.Instance.Log.InfoFormat("NBsn.CMenuAB.MakeABAndroid()"); 
+            NBsnEditor.CAssetBuddleBuilder.MakeAB(BuildTarget.Android);
         } 
         #endregion
     }

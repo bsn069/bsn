@@ -10,5 +10,10 @@ namespace NBsn {
         public static string GetRelativeAssetsPath(string path) {
             return "Assets" + Path.GetFullPath(path).Replace(Path.GetFullPath(Application.dataPath), "").Replace('\\', '/');
         }
+
+        // Assets\ABRes\Package\Prefab\UI\UITest.prefab -> Assets/ABRes/Package/Prefab/UI/UITest.prefab 
+        public static string FormatPathSplitChar(string path) {
+            return path.Replace('\\', '/');
+        }
     }  
 }

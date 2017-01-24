@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f921204c228012040b0441e1aadf5c1f
-timeCreated: 1482319615
+guid: ff5ae819c2f6fd04e8fe55c459ccc50f
+timeCreated: 1482319576
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
@@ -43,7 +43,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 2, y: 1, z: 2, w: 1}
+  spriteBorder: {x: 10, y: 6, z: 10, w: 6}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -53,5 +53,5 @@ TextureImporter:
     outline: []
   spritePackingTag: 
   userData: 
-  assetBundleName: assets/abres/art/loading_b_2.png.ab
+  assetBundleName: assets/abres/package/art/loading_b_1.png
   assetBundleVariant: 
