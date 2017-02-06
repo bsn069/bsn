@@ -22,18 +22,16 @@ namespace NBsn {
 
             GameObject go = null;
             switch (NBsn.Config.ResLoadType) {
-                case NBsn.EResLoadType.EditorABRes: {
 #if UNITY_EDITOR
+                case NBsn.EResLoadType.EditorABRes: {
                      go = m_ABRes.Load(strPath, strSuffix);
-#endif
                 }
                 break;
                 case NBsn.EResLoadType.EditorABOut: {
-#if UNITY_EDITOR
                      go = m_ABOut.Load(strPath, strSuffix);
-#endif
                 }
                 break;
+#endif
                 case NBsn.EResLoadType.AppAB: {
 
                 }
