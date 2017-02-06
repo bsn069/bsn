@@ -19,7 +19,7 @@ namespace NBsn {
             var strUIPath = string.Format("{0}{1}", m_strUIPrefebRootDir, strUIName);
             NBsn.CGlobal.Instance.Log.InfoFormat("strUIPath={0}", strUIPath);
 
-            var goUIPrefeb = NBsn.CGlobal.Instance.ResMgr.Load(strUIPath);
+            var goUIPrefeb = NBsn.CGlobal.Instance.ResMgr.Load(strUIPath, "prefab");
             if (goUIPrefeb == null) {
                 NBsn.CGlobal.Instance.Log.InfoFormat("LoadRes fail! strUIPath={0}", strUIPath);
                 return null;

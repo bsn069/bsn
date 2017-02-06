@@ -3,7 +3,8 @@ using UnityEditor;
 using System.Collections.Generic;
 using System.IO;
 
-namespace NBsnEditor {
+namespace NBsnEditor {       
+
     public static class CAssetBuddleBuilder  {
         // strABResRelativeDir "ABRes" relative
         // strABsuffix ".ab"
@@ -67,7 +68,8 @@ namespace NBsnEditor {
             Directory.CreateDirectory(strOutFullPath);
 
 		    AssetDatabase.Refresh();
-            BuildPipeline.BuildAssetBundles(strOutFullPath);
+            BuildPipeline.BuildAssetBundles(strOutFullPath, BuildAssetBundleOptions.UncompressedAssetBundle, buildTarget);
+		    AssetDatabase.Refresh();
         } 
 
         // public static string GetOutFullPath(BuildTarget buildTarget) {

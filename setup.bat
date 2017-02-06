@@ -29,13 +29,21 @@ if not exist u3d\Assets\Bsn\ThirdPart\tolua (
 					del ToLuaExport.* /Q
 					del ToLuaMenu.* /Q
 				popd
+				pushd Core
+					del ToLua.cs /Q
+					del ToLua.cs.meta /Q
+				popd
 			popd
 		popd
 	popd
 )
 
+if exist u3d\Assets\ABOut (
+	rmdir u3d\Assets\ABOut /S /Q
+)
 rem GOBIN=E:\github\bsn\gopath\bin
 rem GOPATH=E:\github\bsn\gopath
 rem GOROOT=D:\Software\Go17
 rem 
 rem go get github.com/astaxie/beego
+pause

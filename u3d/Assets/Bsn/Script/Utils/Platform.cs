@@ -4,7 +4,9 @@ using LuaInterface;
 using System.Runtime.InteropServices;
 using System;
 using System.IO;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 
 namespace NBsn {
@@ -17,8 +19,9 @@ namespace NBsn {
             #else
                 return null;
             #endif
-        }
-
+        } 
+       
+#if UNITY_EDITOR
         public static string Name(BuildTarget buildTarget) {
             Debug.LogFormat("NBsn.CPlatform.Name({0})", buildTarget);
             string strPlatform = "";
@@ -39,6 +42,8 @@ namespace NBsn {
             }
 
             return strPlatform;
-        }        
-    }  
+        } 
+#endif
+
+    } 
 }

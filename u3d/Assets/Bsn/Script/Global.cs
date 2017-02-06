@@ -77,8 +77,10 @@ namespace NBsn {
         // 游戏逻辑初始化
         public void GameInit(GameObject goBsn) {
             Log.Info("NBsn.CGlobal.GameInit()"); 
+            ResMgr.Init();
             UIMgr.Init(goBsn.transform.FindChild("UI"));
             UIMgr.GetUI("UIBsnUpdate");
+            //UIMgr.GetUI("UITest");
         }
 
         public void GameUnInit() {

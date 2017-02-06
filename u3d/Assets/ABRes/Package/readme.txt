@@ -1,1 +1,0 @@
-此文件夹下的会在生成AB后 复制到StreamingAssets目录中 也就会在build时进入安装包中

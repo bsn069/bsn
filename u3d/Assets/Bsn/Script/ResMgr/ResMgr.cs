@@ -5,22 +5,60 @@ using System.Runtime.InteropServices;
 using System;
 using System.IO;
 using System.Collections.Generic;
-using UnityEditor;
 
 namespace NBsn {
 
     // [Reg2LuaAttribute]
     public class CResMgr {
-        protected CResources m_Resources = new CResources();
+        protected CResources    m_Resources = new CResources();
 
-        public GameObject Load(string strPath) {
-            var go = m_Resources.Load(strPath);
+#if UNITY_EDITOR
+        protected CABRes        m_ABRes     = new CABRes();
+        protected CABOut        m_ABOut     = new CABOut();
+#endif
+
+        public GameObject Load(string strPath, string strSuffix) {
+            NBsn.CGlobal.Instance.Log.InfoFormat("NBsn.CResMgr.Load({0}, {1})", strPath, strSuffix);
+
+            GameObject go = null;
+            switch (NBsn.Config.ResLoadType) {
+                case NBsn.EResLoadType.EditorABRes: {
+#if UNITY_EDITOR
+                     go = m_ABRes.Load(strPath, strSuffix);
+#endif
+                }
+                break;
+                case NBsn.EResLoadType.EditorABOut: {
+#if UNITY_EDITOR
+                     go = m_ABOut.Load(strPath, strSuffix);
+#endif
+                }
+                break;
+                case NBsn.EResLoadType.AppAB: {
+
+                }
+                break;
+                default: {
+                    NBsn.CGlobal.Instance.Log.InfoFormat("NBsn.Config.ResLoadType={0}", NBsn.Config.ResLoadType);
+                    return null;
+                }
+            }
+            
+            if (go == null) {
+                go = m_Resources.Load(strPath);
+            }
 
             if (go != null) {
                 go = (GameObject)UnityEngine.Object.Instantiate(go);
                 go.name = go.name.Replace("(Clone)", "");
             }
             return go;
+        }
+
+        public void Init() {
+#if UNITY_EDITOR
+            m_ABOut.Init();
+#endif
         }
 
         //private string m_strResRootDir = null;

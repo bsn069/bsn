@@ -9,6 +9,28 @@ using System.Collections.Generic;
 
 namespace NBsnEditor {
     public static class Utils  {
+        public static string PlatformName(BuildTarget buildTarget) {
+        Debug.LogFormat("NBsn.CPlatform.Name({0})", buildTarget);
+        string strPlatform = "";
+        switch (buildTarget) {
+            case BuildTarget.Android: {
+                    strPlatform = "Android";
+                } 
+                break;               
+            case BuildTarget.StandaloneWindows:
+            case BuildTarget.StandaloneWindows64: {
+                    strPlatform = "Win";
+                }
+                break;              
+            default: {
+                    Debug.LogErrorFormat("unknown buildTarget={0}", buildTarget);
+                    return null;
+                }
+        }
+
+        return strPlatform;
+    } 
+
         // http://www.xuanyusong.com/archives/4207 查找资源被哪里引用了
         [MenuItem("Bsn/Assets/Find References", false, 1)]
         static private void FindReferences() {

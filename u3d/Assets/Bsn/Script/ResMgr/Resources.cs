@@ -5,7 +5,6 @@ using System.Runtime.InteropServices;
 using System;
 using System.IO;
 using System.Collections.Generic;
-using UnityEditor;
 
 namespace NBsn {
     public class CResources {
