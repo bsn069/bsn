@@ -20,6 +20,14 @@ namespace NBsn {
             NBsn.CGlobal.Instance.Log.InfoFormat("strPath={0}", strPath);
             return AssetDatabase.LoadAssetAtPath<GameObject>(strPath);
         }
+
+        public bool Init() {
+            return true;
+        }
+
+        public void UnInit() {
+
+        }
     }
 }
 #endif

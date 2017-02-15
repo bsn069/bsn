@@ -14,12 +14,13 @@ namespace NBsn {
 
         void Start() {
             NBsn.CGlobal.Instance.Log.InfoFormat("NBsn.MMain.Start()"); 
-            NBsn.CGlobal.Instance.GameInit(gameObject);
+            NBsn.CGlobal.Instance.AppInit(gameObject, this);
+            NBsn.CGlobal.Instance.StartApp();
         }
 
         void OnDestroy() {
             NBsn.CGlobal.Instance.Log.InfoFormat("NBsn.MMain.OnDestroy()"); 
-            NBsn.CGlobal.Instance.GameUnInit();
+            NBsn.CGlobal.Instance.AppUnInit();
             NBsn.CGlobal.Instance.Dispose();
         }
     }

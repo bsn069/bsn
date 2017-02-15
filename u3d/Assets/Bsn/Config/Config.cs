@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 
 namespace NBsn {
-    [Reg2LuaAttribute]
+    //[Reg2LuaAttribute]
     public static class Config {
         // AB存放相对Assets目录格式化
         // {0} strPlatform[Win, Android]

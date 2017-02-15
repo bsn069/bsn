@@ -42,21 +42,21 @@ namespace NBsn {
             get { return m_UIMgr; }
         }
 
-        #region
-        public CGlobal() {
-            m_instance = this;
+        public NBsn.MMain Main {
+            get { return m_Main; }
         }
-        protected static CGlobal m_instance = null;
 
-        protected NBsn.CLog m_Log = new NBsn.CLog();
-        protected NBsn.CPathConfig m_PathConfig = new NBsn.CPathConfig();
-        protected NBsn.NToLua.CConfig m_ToLuaConfig = new NBsn.NToLua.CConfig();
-        protected NBsn.CResMgr m_ResMgr = new NBsn.CResMgr();
-        protected NBsn.CUIMgr m_UIMgr = new NBsn.CUIMgr();
+        public UnityEngine.GameObject GoMain {
+            get { return m_goMain; }
+        }
 
-        protected string    m_strPlatformName = null;
+        public UnityEngine.Transform TfMain {
+            get { return m_tfMain; }
+        }
 
-        #endregion
+        public NBsn.CCoroutine Coroutine {
+            get { return m_Coroutine; }
+        }
 
         // 初始化配置 不依赖游戏逻辑 编辑器代码亦可调用
         public void ConfigInit(string strPlatformName) {
@@ -74,32 +74,61 @@ namespace NBsn {
             ToLuaConfig.Init();
         }
 
+        #region game init
         // 游戏逻辑初始化
-        public void GameInit(GameObject goBsn) {
-            Log.Info("NBsn.CGlobal.GameInit()"); 
+        public void AppInit(GameObject goMain, NBsn.MMain Main) {
+            Log.Info("NBsn.CGlobal.AppInit()"); 
+
+            m_goMain    = goMain;
+            m_Main      = Main;
+            m_tfMain    = m_goMain.transform;
+
+            Coroutine.Init(m_Main);
             ResMgr.Init();
-            UIMgr.Init(goBsn.transform.FindChild("UI"));
-            UIMgr.GetUI("UIBsnUpdate");
-            //UIMgr.GetUI("UITest");
+            UIMgr.Init(m_tfMain.FindChild("UI"));
         }
 
-        public void GameUnInit() {
-            Log.Info("NBsn.CGlobal.GameUnInit()"); 
+        public void AppUnInit() {
+            Log.Info("NBsn.CGlobal.AppUnInit()"); 
 
             UIMgr.UnInit();
-            m_UIMgr = null;
+            ResMgr.UnInit();
+            Coroutine.UnInit();
+
+            m_tfMain    = null;
+            m_Main      = null;
+            m_goMain    = null;
+        }
+        #endregion
+
+        public void StartApp() {
+            Log.Info("NBsn.CGlobal.StartApp()"); 
+
+            UIMgr.GetUI("UIBsnUpdate");
         }
 
+        #region
+        public CGlobal() {
+            m_instance = this;
+        }
         public void Dispose() {
             m_instance = null;
         }
 
-        //public static LuaState          ms_luaState  = null;
-        //public static GameObject        ms_goMain    = null;
-        //public static NBsn.MMain         ms_Main      = null;
-        //public static NBsn.CLuaUpdate    ms_luaLooper = null;
-        //public static NBsn.UIMgr        ms_UIMgr = new NBsn.UIMgr();
-        //public static NBsn.CUpdateRes   ms_CUpdateRes = null;
-        //public static NBsn.CResMgr      ms_CResMgr = new NBsn.CResMgr();
+        protected static CGlobal m_instance = null;
+
+        protected NBsn.CLog m_Log = new NBsn.CLog();
+        protected NBsn.CPathConfig m_PathConfig = new NBsn.CPathConfig();
+        protected NBsn.NToLua.CConfig m_ToLuaConfig = new NBsn.NToLua.CConfig();
+        protected NBsn.CResMgr m_ResMgr = new NBsn.CResMgr();
+        protected NBsn.CUIMgr m_UIMgr = new NBsn.CUIMgr();
+        protected NBsn.CCoroutine m_Coroutine = new NBsn.CCoroutine();
+
+        protected NBsn.MMain m_Main = null;
+        protected GameObject m_goMain = null;
+        protected Transform m_tfMain = null;
+
+        protected string    m_strPlatformName = null;
+        #endregion
     }
 }

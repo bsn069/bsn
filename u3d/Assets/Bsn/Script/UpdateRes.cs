@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace NBsn {
 
-    [Reg2LuaAttribute]
+    //[Reg2LuaAttribute]
     public class CUpdateRes {
         //private string m_strError = null;
         //private List<string> m_strNeedDownloadFilePath = null;

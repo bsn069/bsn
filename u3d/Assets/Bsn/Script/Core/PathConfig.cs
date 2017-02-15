@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System;
 
 namespace NBsn {
-    [Reg2LuaAttribute]
+    //[Reg2LuaAttribute]
     public class CPathConfig {
         // AB根目录 相对资源路径 
         public string PlatformABPath {

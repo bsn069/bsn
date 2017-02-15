@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System;
 
 namespace NBsn.NToLua {
-    [Reg2LuaAttribute]
+    //[Reg2LuaAttribute]
     public class CConfig {
         public string LuaLocalFullPath {
             get { return m_strLuaLocalFullPath; }

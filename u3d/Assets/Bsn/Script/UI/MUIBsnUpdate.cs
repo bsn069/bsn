@@ -10,6 +10,7 @@ namespace NBsn {
 
         void Awake() {
             NBsn.CGlobal.Instance.Log.Info("NBsn.MUIBsnUpdate.Awake()"); 
+
             var tfSlider = transform.FindChild("Slider");
             m_slider    = tfSlider.GetComponent<Slider>();
             m_value     = tfSlider.FindChild("Text").GetComponent<Text>();
