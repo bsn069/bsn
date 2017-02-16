@@ -21,6 +21,8 @@ gopath/bin
 gopath/src/github.com
 gopath/src/sourcegraph.com
 gopath/src/golang.org
+gopath/src/file_server/file_server
+gopath/src/u3d_update/u3d_update
 
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o
