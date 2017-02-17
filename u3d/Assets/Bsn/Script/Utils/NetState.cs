@@ -10,7 +10,7 @@ namespace NBsn {
  
     */
     public static class CNetState {
-        public static bool IsWifi() {
+        public static bool IsLan() {
             return Application.internetReachability == NetworkReachability.ReachableViaLocalAreaNetwork;
         }
 
@@ -23,8 +23,8 @@ namespace NBsn {
         }
 
         public static string NetName() {
-            if (IsWifi()) {
-                return "wifi";
+            if (IsLan()) {
+                return "lan";
             }
 
             if (IsMobile()) {

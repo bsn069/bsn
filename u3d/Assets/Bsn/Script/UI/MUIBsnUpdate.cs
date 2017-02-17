@@ -14,7 +14,7 @@ namespace NBsn {
             var tfSlider = transform.FindChild("Slider");
             m_slider    = tfSlider.GetComponent<Slider>();
             m_value     = tfSlider.FindChild("Text").GetComponent<Text>();
-            m_tip       = transform.FindChild("Tip").GetComponent<Text>();
+            m_tip       = transform.FindChild("Screen/Text").GetComponent<Text>();
         }
 
         public void SetProgress(float fValue) {

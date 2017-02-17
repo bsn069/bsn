@@ -104,7 +104,9 @@ namespace NBsn {
         public void StartApp() {
             Log.Info("NBsn.CGlobal.StartApp()"); 
 
-            UIMgr.GetUI("UIBsnUpdate");
+            var goUI = UIMgr.GetUI("UIBsnUpdate");
+            var mUI = goUI.AddComponent<MUIBsnUpdate>();
+            mUI.SetTip( CNetState.NetName() );
         }
 
         #region
