@@ -1,0 +1,1 @@
+file_server.exe -addr :10001 -url /u3d_res/ -dir F:\github\bsn\u3d\Assets\ABOut 
