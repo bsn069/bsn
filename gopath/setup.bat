@@ -34,6 +34,21 @@ pushd src
 	if not exist github.com/xtaci/kcp-go (
 		go get github.com/xtaci/kcp-go
 	)
+
+	echo download github.com/ssdb/gossdb
+	if not exist github.com/ssdb/gossdb (
+		go get  github.com/ssdb/gossdb
+	)
+
+	echo download github.com/ssdb/gossdb
+	if not exist github.com/ssdb/gossdb (
+		go get  github.com/ssdb/gossdb
+	)
+
+	echo download github.com/syndtr/goleveldb/leveldb
+	if not exist github.com/syndtr/goleveldb/leveldb (
+		go get  github.com/syndtr/goleveldb/leveldb
+	)
 popd
 
 echo install protoc-gen-go
