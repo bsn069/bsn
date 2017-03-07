@@ -22,6 +22,14 @@ pushd src
 		ln -s %cd%/github.com/golang/net %cd%/golang.org/x/net
 	)
 
+	echo download golang.org/x/tools
+	if not exist github.com/golang/tools (
+		go get github.com/golang/tools
+	)
+	if not exist golang.org/x/tools (
+		ln -s %cd%/github.com/golang/tools %cd%/golang.org/x/tools
+	)
+
 	echo download github.com/xtaci/kcp-go
 	if not exist github.com/xtaci/kcp-go (
 		go get github.com/xtaci/kcp-go

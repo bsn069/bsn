@@ -23,6 +23,7 @@ gopath/src/golang.org
 gopath/src/file_server/file_server
 gopath/src/u3d_update/u3d_update
 gopath/src/u3d_update/static/u3d
+gopath/src/gosrc
 
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o

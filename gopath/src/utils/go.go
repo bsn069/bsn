@@ -1,9 +1,13 @@
 package utils
 
 import (
-	"os/exec"
+	"os"
 )
 
-func LookPath(strFileName string) (string, error) {
-	return exec.LookPath(strFileName)
+func IsRootUser() bool {
+	return os.Geteuid() != 0
+}
+
+func Env(strName string) string {
+	return os.Getenv(strName)
 }

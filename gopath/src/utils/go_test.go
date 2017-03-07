@@ -1,9 +1,13 @@
 package utils
 
 import "testing"
-import "fmt"
 
-func Test_LookPath(t *testing.T) {
-	strPath, err := LookPath("go")
-	fmt.Println(strPath, err)
+func Test_IsRootUser(t *testing.T) {
+	if !IsRootUser() {
+		t.Error()
+	}
+}
+
+func Test_Env(t *testing.T) {
+
 }
