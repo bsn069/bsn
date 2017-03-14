@@ -4,7 +4,7 @@ import "testing"
 
 func Test_IsRootUser(t *testing.T) {
 	if !IsRootUser() {
-		t.Error()
+		t.Fatal()
 	}
 }
 

@@ -49,6 +49,11 @@ pushd src
 	if not exist github.com/syndtr/goleveldb/leveldb (
 		go get  github.com/syndtr/goleveldb/leveldb
 	)
+
+	echo download github.com/golang/snappy
+	if not exist github.com/golang/snappy (
+		go get  github.com/golang/snappy
+	)
 popd
 
 echo install protoc-gen-go
@@ -57,6 +62,22 @@ if not exist bin\protoc-gen-go.exe (
 		go install
 	popd
 )
+
+pushd ..\nogit
+	echo download ssdb-bin
+	if not exist ssdb-bin (
+		git clone https://github.com/ideawu/ssdb-bin.git
+	)
+popd
+
+
+
+
+
+
+
+
+
 
 pause
 

@@ -17,6 +17,7 @@ u3d/Assets/ABOut.meta
 
 gopath/pkg
 gopath/bin
+gopath/nogit
 gopath/src/github.com
 gopath/src/sourcegraph.com
 gopath/src/golang.org

@@ -17,7 +17,7 @@ func Test_PushPopU8(t *testing.T) {
 	for i := 0; i < len(byBuf); i++ {
 		byTemp = PopU8(byTemp, &u8Temp)
 		if u8Temp != uint8(i) {
-			t.Error()
+			t.Fatal()
 		}
 	}
 }
@@ -43,7 +43,7 @@ func Test_PushPopU16(t *testing.T) {
 			break
 		}
 		if u16Temp != uint16(i) {
-			t.Error()
+			t.Fatal()
 		}
 	}
 }
@@ -69,7 +69,7 @@ func Test_PushPopU32(t *testing.T) {
 			break
 		}
 		if u32Temp != uint32(i) {
-			t.Error()
+			t.Fatal()
 		}
 	}
 }
@@ -95,7 +95,7 @@ func Test_PushPopU64(t *testing.T) {
 			break
 		}
 		if u64Temp != uint64(i) {
-			t.Error()
+			t.Fatal()
 		}
 	}
 }
@@ -111,49 +111,49 @@ func Test_PushPopU16String(t *testing.T) {
 	strTemp0 := string("我abc+23")
 	byPush = PushU16String(byPush, strTemp0)
 	if byPush == nil {
-		t.Error()
+		t.Fatal()
 	}
 
 	byPop = byBuf
 	byPop = PopU16String(byPop, &strValue)
 	if strValue != strTemp0 {
-		t.Error()
+		t.Fatal()
 	}
 
 	strTemp1 := string("11111")
 	byPush = PushU16String(byPush, strTemp1)
 	if byPush == nil {
-		t.Error()
+		t.Fatal()
 	}
 
 	byPop = byBuf
 	byPop = PopU16String(byPop, &strValue)
 	if strValue != strTemp0 {
-		t.Error()
+		t.Fatal()
 	}
 	byPop = PopU16String(byPop, &strValue)
 	if strValue != strTemp1 {
-		t.Error()
+		t.Fatal()
 	}
 
 	strTemp2 := string("我33fddf")
 	byPush = PushU16String(byPush, strTemp2)
 	if byPush == nil {
-		t.Error()
+		t.Fatal()
 	}
 
 	byPop = byBuf
 	byPop = PopU16String(byPop, &strValue)
 	if strValue != strTemp0 {
-		t.Error()
+		t.Fatal()
 	}
 	byPop = PopU16String(byPop, &strValue)
 	if strValue != strTemp1 {
-		t.Error()
+		t.Fatal()
 	}
 	byPop = PopU16String(byPop, &strValue)
 	if strValue != strTemp2 {
-		t.Error()
+		t.Fatal()
 	}
 }
 
@@ -168,48 +168,48 @@ func Test_PushPopU8String(t *testing.T) {
 	strTemp0 := string("我abc+23")
 	byPush = PushU8String(byPush, strTemp0)
 	if byPush == nil {
-		t.Error()
+		t.Fatal()
 	}
 
 	byPop = byBuf
 	byPop = PopU8String(byPop, &strValue)
 	if strValue != strTemp0 {
-		t.Error()
+		t.Fatal()
 	}
 
 	strTemp1 := string("11111")
 	byPush = PushU8String(byPush, strTemp1)
 	if byPush == nil {
-		t.Error()
+		t.Fatal()
 	}
 
 	byPop = byBuf
 	byPop = PopU8String(byPop, &strValue)
 	if strValue != strTemp0 {
-		t.Error()
+		t.Fatal()
 	}
 	byPop = PopU8String(byPop, &strValue)
 	if strValue != strTemp1 {
-		t.Error()
+		t.Fatal()
 	}
 
 	strTemp2 := string("我33fddf")
 	byPush = PushU8String(byPush, strTemp2)
 	if byPush == nil {
-		t.Error()
+		t.Fatal()
 	}
 
 	byPop = byBuf
 	byPop = PopU8String(byPop, &strValue)
 	if strValue != strTemp0 {
-		t.Error()
+		t.Fatal()
 	}
 	byPop = PopU8String(byPop, &strValue)
 	if strValue != strTemp1 {
-		t.Error()
+		t.Fatal()
 	}
 	byPop = PopU8String(byPop, &strValue)
 	if strValue != strTemp2 {
-		t.Error()
+		t.Fatal()
 	}
 }

@@ -10,10 +10,11 @@ import (
 )
 
 func Test_leveldb(t *testing.T) {
-	strDBPath := PathJoin(PathPwd(), "db_t1")
+	strGoPath := PathGoPath()
+	strDBPath := PathJoin(strGoPath, "nogit/test/utils/leveldb")
 	db, err := leveldb.OpenFile(strDBPath, nil)
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 	defer db.Close()
 
@@ -21,20 +22,20 @@ func Test_leveldb(t *testing.T) {
 	v1 := []byte("v11")
 	err = db.Put(k1, v1, nil)
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	data, err := db.Get(k1, nil)
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 	if string(data) != string(v1) {
-		t.Error()
+		t.Fatal()
 	}
 
 	err = db.Delete(k1, nil)
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	batch := new(leveldb.Batch)
@@ -47,7 +48,7 @@ func Test_leveldb(t *testing.T) {
 	batch.Delete([]byte("baz"))
 	err = db.Write(batch, nil)
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	iter := db.NewIterator(nil, nil)
@@ -59,7 +60,7 @@ func Test_leveldb(t *testing.T) {
 	iter.Release()
 	err = iter.Error()
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	fmt.Println(`util.BytesPrefix([]byte("a"))`)
@@ -72,7 +73,7 @@ func Test_leveldb(t *testing.T) {
 	iter.Release()
 	err = iter.Error()
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 
 	fmt.Println(`&util.Range{[]byte("a2"), []byte("a4")}`)
@@ -85,6 +86,6 @@ func Test_leveldb(t *testing.T) {
 	iter.Release()
 	err = iter.Error()
 	if err != nil {
-		t.Error(err)
+		t.Fatal(err)
 	}
 }
