@@ -1,5 +1,9 @@
 @echo off
 
+if not exist nogit (
+	mkdir nogit
+) 
+
 echo setup tolua
 if not exist u3d\Assets\Bsn\ThirdPart\tolua (
 	pushd nogit

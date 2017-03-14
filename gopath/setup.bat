@@ -1,5 +1,10 @@
 @echo off
 
+echo create dir nogit
+if not exist nogit (
+	mkdir nogit
+) 
+
 pushd src
 	echo download github.com/golang/protobuf/protoc-gen-go
 	if not exist github.com/golang/protobuf/protoc-gen-go (
@@ -63,7 +68,7 @@ if not exist bin\protoc-gen-go.exe (
 	popd
 )
 
-pushd ..\nogit
+pushd nogit
 	echo download ssdb-bin
 	if not exist ssdb-bin (
 		git clone https://github.com/ideawu/ssdb-bin.git
