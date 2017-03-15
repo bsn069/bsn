@@ -9,21 +9,29 @@ if not exist nogit\ssdb-bin (
 
 set id=10010
 echo listen 127.0.0.1:%id%
-mkdir ssdb\data\%id%\var
+if not exist ssdb\data\%id%\var (
+    mkdir ssdb\data\%id%\var
+)
 start %ssdbbin% .\ssdb\config\%id%.conf
 
 set id=10011
 echo listen 127.0.0.1:%id%
-mkdir ssdb\data\%id%\var
+if not exist ssdb\data\%id%\var (
+    mkdir ssdb\data\%id%\var
+)
 start %ssdbbin% .\ssdb\config\%id%.conf
 
 set id=10020
 echo listen 127.0.0.1:%id%
-mkdir ssdb\data\%id%\var
+if not exist ssdb\data\%id%\var (
+    mkdir ssdb\data\%id%\var
+)
 start %ssdbbin% .\ssdb\config\%id%.conf
 
 set id=10021
 echo listen 127.0.0.1:%id%
-mkdir ssdb\data\%id%\var
+if not exist ssdb\data\%id%\var (
+    mkdir ssdb\data\%id%\var
+)
 start %ssdbbin% .\ssdb\config\%id%.conf
  
