@@ -1,11 +1,19 @@
 @echo off
-set ssdbbin=nogit\ssdb-bin\ssdb-server-1.9.4.exe
+set ssdbbinname=ssdb-server-1.9.4.exe
 
 if not exist nogit\ssdb-bin (
-    echo not found dir nogit\ssdb-bin 
-    echo please run setup.bat
-    exit
+    echo nof found nogit\ssdb-bin
+    pushd nogit
+        echo download nogit\ssdb-bin
+        git clone https://github.com/ideawu/ssdb-bin.git
+    popd
 )
+set ssdbbin=nogit\ssdb-bin\%ssdbbinname%
+
+if not exist %ssdbbin% (
+    echo not found %ssdbbin%
+    goto Exit0
+)    
 
 set id=10010
 echo listen 127.0.0.1:%id%
@@ -35,3 +43,4 @@ if not exist ssdb\data\%id%\var (
 )
 start %ssdbbin% .\ssdb\config\%id%.conf
  
+:Exit0

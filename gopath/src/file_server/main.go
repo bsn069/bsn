@@ -6,6 +6,8 @@ import (
 	"log"
 	"net/http"
 	_ "net/http/pprof"
+	"time"
+	"utils"
 )
 
 var strListenAddr string
@@ -29,6 +31,7 @@ func main() {
 		handle.ServeHTTP(w, r)
 	})
 
+	go t()
 	http.Handle(strRootUrl, logHandle)
 	http.ListenAndServe(strListenAddr, nil)
 }
@@ -41,4 +44,14 @@ func init() {
 
 func a(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(1)
+}
+
+func t() {
+	for {
+		time.Sleep(time.Duration(5 * time.Second))
+		strLines := utils.ReadLines()
+		for k, v := range strLines {
+			fmt.Println(k, v)
+		}
+	}
 }

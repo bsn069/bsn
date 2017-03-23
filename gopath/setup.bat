@@ -59,6 +59,11 @@ pushd src
 	if not exist github.com/golang/snappy (
 		go get  github.com/golang/snappy
 	)
+
+	echo download github.com/Workiva/go-datastructures
+	if not exist github.com/Workiva/go-datastructures (
+		go get  github.com/Workiva/go-datastructures/...
+	)
 popd
 
 echo install protoc-gen-go
