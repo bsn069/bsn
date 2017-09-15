@@ -11,10 +11,10 @@ namespace NBsn {
         void Awake() {
             NBsn.CGlobal.Instance.Log.Info("NBsn.MUIBsnUpdate.Awake()"); 
 
-            var tfSlider = transform.FindChild("Slider");
+            var tfSlider = transform.Find("Slider");
             m_slider    = tfSlider.GetComponent<Slider>();
-            m_value     = tfSlider.FindChild("Text").GetComponent<Text>();
-            m_tip       = transform.FindChild("Screen/Text").GetComponent<Text>();
+            m_value     = tfSlider.Find("Text").GetComponent<Text>();
+            m_tip       = transform.Find("Screen/Text").GetComponent<Text>();
         }
 
         public void SetProgress(float fValue) {

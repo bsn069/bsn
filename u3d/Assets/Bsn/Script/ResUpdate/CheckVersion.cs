@@ -17,7 +17,7 @@ namespace NBsn {
 
 
         private IEnumerator CoroutineReqVersion() {
-            NBsn.Config.GetServerResUrl(1);
+            // NBsn.Config.GetServerResUrl(1);
 
             yield return null; 
         }

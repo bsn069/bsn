@@ -85,7 +85,7 @@ namespace NBsn {
 
             Coroutine.Init(m_Main);
             ResMgr.Init();
-            UIMgr.Init(m_tfMain.FindChild("UI"));
+            UIMgr.Init(m_tfMain.Find("UI"));
         }
 
         public void AppUnInit() {

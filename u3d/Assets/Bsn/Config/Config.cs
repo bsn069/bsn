@@ -24,8 +24,8 @@ namespace NBsn {
             return ms_strServerResUrl[uIndex];
         }
 
-        public bool ToNextServerResUrl() {
-
+        public static bool ToNextServerResUrl() {
+			return true;
         }
 
         // 服务器资源 下载到本地的根目录名
